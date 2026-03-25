@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+
+{% block title %}Customer Care - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Customer Care Header -->
+<section class="py-5 mb-4">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+            <h1 class="fw-bold mb-4">Customer Care</h1>
+            <p class="lead text-muted">We're committed to providing exceptional support throughout your logistics journey.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Support Channels Section -->
+<section class="mb-5" data-aos="fade-up">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6">
+            <div class="card service-card h-100 p-4 text-center">
+                <div class="card-body">
+                    <i class="fas fa-headset service-icon"></i>
+                    <h4 class="card-title">24/7 Support</h4>
+                    <p class="card-text">Our customer care team is available round-the-clock to assist with your inquiries and concerns.</p>
+                    <p class="mt-3 mb-0"><strong>Call us:</strong> +1-800-123-4567</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card service-card h-100 p-4 text-center">
+                <div class="card-body">
+                    <i class="fas fa-envelope service-icon"></i>
+                    <h4 class="card-title">Email Support</h4>
+                    <p class="card-text">Send us your questions anytime. We typically respond within 2 business hours.</p>
+                    <p class="mt-3 mb-0"><strong>Email:</strong> support@example.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="my-5 py-4 bg-light rounded" data-aos="fade-up">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="text-muted">Find quick answers to common questions</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="accordion" id="faqAccordion">
+                <!-- <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            How can I track my shipment?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can track your shipment by entering your tracking number on our website's tracking page. Alternatively, you can contact our customer service team with your reference number for real-time updates.
+                        </div>
+                    </div>
+                </div> -->
+                
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What shipping options do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a comprehensive range of shipping options including air freight, ocean freight, road transportation, and express delivery services. Each option can be customized to meet your specific logistics requirements.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            How do I get a shipping quote?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can request a shipping quote by clicking on the "Get a Quote" button on our website. Our team will evaluate your shipping needs and provide a detailed quote within 24 hours.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0 mb-3 shadow-sm">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            What is your claims process?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            In case of any issues with your shipment, please contact our customer service team immediately. Our claims process is straightforward – we'll require documentation of the damage or loss, and our team will guide you through the necessary steps for resolution.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            Do you offer customs clearance services?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, we provide comprehensive customs clearance services for both import and export shipments. Our experienced customs brokers ensure smooth and compliant passage of your goods through customs checkpoints worldwide.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Commitment Section -->
+<section class="my-5" data-aos="fade-up">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="/api/placeholder/600/400" alt="Customer Support Team" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="fw-bold mb-4">Our Customer Commitment</h2>
+            <p>We believe exceptional customer service is the foundation of successful logistics. Our dedicated support team is committed to providing:</p>
+            <ul class="list-unstyled mt-4">
+                <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Prompt Response:</strong> We aim to respond to all inquiries within 2 hours</li>
+                <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Personalized Solutions:</strong> Tailored approach to address your unique needs</li>
+                <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Proactive Updates:</strong> Regular shipment status notifications</li>
+                <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Issue Resolution:</strong> Swift and effective problem-solving</li>
+                <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Continuous Improvement:</strong> We regularly update our processes based on your feedback</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Service Levels -->
+<section class="my-5 py-5 bg-light rounded" data-aos="fade-up">
+    <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="fw-bold">Our Service Level Commitments</h2>
+            <p class="text-muted">We hold ourselves to the highest standards</p>
+        </div>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="100">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+                <div class="display-5 text-primary mb-3">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h4 class="fw-bold">Response Time</h4>
+                <p class="mb-0">2 hours or less for all inquiries</p>
+            </div>
+        </div>
+        
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+                <div class="display-5 text-primary mb-3">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h4 class="fw-bold">Issue Resolution</h4>
+                <p class="mb-0">90% resolved on first contact</p>
+            </div>
+        </div>
+        
+        <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="300">
+            <div class="bg-white p-4 rounded shadow-sm h-100">
+                <div class="display-5 text-primary mb-3">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h4 class="fw-bold">Support Hours</h4>
+                <p class="mb-0">24/7/365 availability</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="my-5 py-5 bg-primary text-white rounded" data-aos="fade-up">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h2 class="fw-bold mb-4">Need Assistance with Your Shipment?</h2>
+            <p class="mb-4">Our customer support team is ready to help you with any questions or concerns</p>
+            <div class="d-flex justify-content-center gap-3">
+                <!-- <a href="tel:+18001234567" class="btn btn-light btn-lg px-4">
+                    <i class="fas fa-phone-alt me-2"></i> Call Us
+                </a> -->
+                <a href="{% url 'contact_us' %}" class="btn btn-outline-light btn-lg px-4">
+                    <i class="fas fa-envelope me-2"></i> Contact Page
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

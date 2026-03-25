@@ -1,0 +1,274 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Core Values - Global Logistics Solutions{% endblock %}
+
+{% block content %}
+<!-- Core Values Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="fw-bold display-4 mb-3">Our Core Values</h1>
+                <p class="lead text-muted">The principles that guide our decisions, shape our culture, and define our commitment to excellence in global logistics.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="{% static 'img/core-vl.webp' %}" alt="Core Values" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Cards Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">What Drives Us Forward</h2>
+            <p class="text-muted">Our core values reflect who we are and what we stand for as a company</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Value 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-handshake service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Integrity</h3>
+                        <p class="card-text">We conduct our business with honesty, transparency, and ethical standards that build trust with our clients, partners, and employees.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-award service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Excellence</h3>
+                        <p class="card-text">We strive for excellence in every aspect of our operations, constantly improving our processes, technology, and service delivery.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-users service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Collaboration</h3>
+                        <p class="card-text">We believe in the power of teamwork and partnerships, working together with our clients and stakeholders to achieve common goals.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value 4 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-lightbulb service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Innovation</h3>
+                        <p class="card-text">We embrace change and continuously seek innovative solutions to meet the evolving needs of our clients and the logistics industry.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value 5 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-globe service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Sustainability</h3>
+                        <p class="card-text">We are committed to environmentally responsible practices, reducing our carbon footprint, and promoting sustainable logistics solutions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Value 6 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4 text-center">
+                        <div class="bg-light p-3 rounded-circle d-inline-block mb-3">
+                            <i class="fas fa-headset service-icon" style="color: #0d6efd;"></i>
+                        </div>
+                        <h3 class="card-title h4">Customer Focus</h3>
+                        <p class="card-text">We prioritize our customers' needs, providing personalized solutions and exceptional service at every touchpoint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Approach Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="fw-bold mb-4">How We Live Our Values</h2>
+                <p>At our company, core values aren't just words on a wall—they're principles we live by every day. Here's how we put our values into action:</p>
+                
+                <div class="accordion mt-4" id="valuesAccordion">
+                    <!-- Accordion Item 1 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <i class="fas fa-certificate text-primary me-2"></i> Quality Assurance
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#valuesAccordion">
+                            <div class="accordion-body">
+                                We maintain rigorous quality control processes across all services, with regular audits and continuous improvement initiatives to ensure we deliver excellence.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accordion Item 2 -->
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                <i class="fas fa-leaf text-primary me-2"></i> Environmental Initiatives
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#valuesAccordion">
+                            <div class="accordion-body">
+                                Our sustainability programs include carbon footprint reduction, optimized routing technology, and eco-friendly packaging options to minimize environmental impact.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Accordion Item 3 -->
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button rounded collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                <i class="fas fa-hands-helping text-primary me-2"></i> Community Engagement
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#valuesAccordion">
+                            <div class="accordion-body">
+                                We actively participate in local community initiatives and global humanitarian logistics efforts, supporting disaster relief and education programs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="{% static 'img/core-man.png' %}" alt="Our Approach" class="img-fluid rounded shadow-lg">
+                    <div class="position-absolute top-0 start-100 translate-middle" style="z-index: -1;">
+                        <div class="bg-primary rounded-circle" style="width: 150px; height: 150px; opacity: 0.1;"></div>
+                    </div>
+                    <div class="position-absolute bottom-0 start-0 translate-middle" style="z-index: -1;">
+                        <div class="bg-primary rounded-circle" style="width: 120px; height: 120px; opacity: 0.1;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<!-- <section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Our Values in Action</h2>
+            <p class="text-muted">Hear from our clients about how our values make a difference</p>
+        </div>
+        
+        <div class="row g-4">
+             Testimonial 1 
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                        </div>
+                        <p class="card-text mb-4">Their commitment to integrity and transparency has made them our trusted logistics partner for over 5 years. We can always count on their reliable service and ethical business practices.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">JD</span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">John Doe</h5>
+                                <small class="text-muted">CEO, Global Ventures</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                        </div>
+                        <p class="card-text mb-4">Their innovative approach to our complex supply chain challenges has transformed our operations. Their team consistently goes above and beyond to deliver excellence.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">JS</span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Jane Smith</h5>
+                                <small class="text-muted">Supply Chain Director, Tech Solutions</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                        </div>
+                        <p class="card-text mb-4">We chose this company for their sustainability commitment. They've helped us reduce our carbon footprint while maintaining efficient logistics. A truly customer-focused partner.</p>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary rounded-circle text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">RJ</span>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-0">Robert Johnson</h5>
+                                <small class="text-muted">Operations Manager, Eco Products</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="fw-bold mb-3">Experience Our Values in Action</h2>
+                <p class="lead mb-0">Discover how our commitment to our core values can transform your logistics experience.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-4">Contact Us Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Company Info Hero Section -->
+<section class="hero-section" style="background: linear-gradient(120deg, #2980b9, #8e44ad); color: white; padding: 80px 0; text-align: center; position: relative; overflow: hidden;">
+    <!-- Animated background shapes -->
+    <div class="animated-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; z-index: 0;">
+        <div class="shape" style="position: absolute; width: 150px; height: 150px; background: white; border-radius: 50%; top: 10%; left: 10%; animation: float 8s infinite ease-in-out;"></div>
+        <div class="shape" style="position: absolute; width: 100px; height: 100px; background: white; border-radius: 30%; top: 60%; left: 80%; animation: float 6s infinite ease-in-out;"></div>
+        <div class="shape" style="position: absolute; width: 80px; height: 80px; background: white; border-radius: 40%; top: 75%; left: 30%; animation: float 10s infinite ease-in-out;"></div>
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 20px;" class="fade-in">About Our Company</h1>
+        <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px;" class="fade-in">Delivering excellence and innovation since 2005</p>
+    </div>
+</section>
+
+<!-- Company Story Section -->
+<section class="scroll-reveal" style="padding: 80px 0; background: white;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 50px;">
+        <div style="flex: 1; min-width: 300px;" class="scroll-reveal-left">
+            <div style="height: 400px; background: url('{% static 'img/company-history.jpg' %}') center/cover; border-radius: 10px; box-shadow: 0 15px 30px rgba(0,0,0,0.15);"></div>
+        </div>
+        <div style="flex: 1; min-width: 300px;" class="scroll-reveal-right">
+            <h2 style="margin-bottom: 25px; color: #333; font-size: 2.2rem; position: relative;">Our Story
+                <span style="position: absolute; bottom: -10px; left: 0; width: 70px; height: 3px; background: #8e44ad;"></span>
+            </h2>
+            <p style="color: #555; margin-bottom: 20px; line-height: 1.7;">Founded in 2005, our company began with a simple vision: to provide innovative solutions that make a difference. What started as a small team of passionate individuals has grown into a diverse organization with global reach.</p>
+            <p style="color: #555; margin-bottom: 20px; line-height: 1.7;">Through years of dedication and commitment to excellence, we've established ourselves as industry leaders, constantly pushing boundaries and setting new standards.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="scroll-reveal" style="padding: 80px 0; background: #f8f9fa;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+        <h2 style="margin-bottom: 50px; color: #333; font-size: 2.2rem; position: relative; display: inline-block;">
+            Vision & Mission
+            <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 70px; height: 3px; background: #8e44ad;"></span>
+        </h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <!-- Vision Card -->
+            <div class="info-card scroll-reveal" style="flex: 1; min-width: 300px; max-width: 500px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s;">
+                <div style="font-size: 3rem; color: #2980b9; margin-bottom: 20px;">👁️</div>
+                <h3 style="margin-bottom: 15px; color: #333; font-size: 1.8rem;">Our Vision</h3>
+                <p style="color: #555; line-height: 1.7;">To be the global leader in innovative solutions, setting industry standards and creating meaningful impact for our clients and communities worldwide.</p>
+            </div>
+            
+            <!-- Mission Card -->
+            <div class="info-card scroll-reveal" style="flex: 1; min-width: 300px; max-width: 500px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: left; transition: transform 0.3s;">
+                <div style="font-size: 3rem; color: #8e44ad; margin-bottom: 20px;">🚀</div>
+                <h3 style="margin-bottom: 15px; color: #333; font-size: 1.8rem;">Our Mission</h3>
+                <p style="color: #555; line-height: 1.7;">To deliver exceptional value through creative solutions, empowering our clients to achieve their goals while fostering a culture of excellence, integrity, and continuous innovation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="scroll-reveal" style="padding: 80px 0; background: white;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+        <h2 style="margin-bottom: 60px; color: #333; font-size: 2.2rem; position: relative; display: inline-block;">
+            Our Core Values
+            <span style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 70px; height: 3px; background: #8e44ad;"></span>
+        </h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <!-- Value 1 -->
+            <div class="value-card scroll-reveal" style="background: linear-gradient(135deg, #f6f9fc, #eef2f7); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s;">
+                <div style="width: 90px; height: 90px; background: white; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <span style="font-size: 2.5rem;">💡</span>
+                </div>
+                <h3 style="margin-bottom: 15px; color: #333;">Innovation</h3>
+                <p style="color: #555; line-height: 1.6;">We embrace creativity and fresh thinking to develop groundbreaking solutions for complex challenges.</p>
+            </div>
+            
+            <!-- Value 2 -->
+            <div class="value-card scroll-reveal" style="background: linear-gradient(135deg, #f6f9fc, #eef2f7); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s;">
+                <div style="width: 90px; height: 90px; background: white; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <span style="font-size: 2.5rem;">🤝</span>
+                </div>
+                <h3 style="margin-bottom: 15px; color: #333;">Integrity</h3>
+                <p style="color: #555; line-height: 1.6;">We operate with honesty, transparency, and ethical standards in every interaction and decision.</p>
+            </div>
+            
+            <!-- Value 3 -->
+            <div class="value-card scroll-reveal" style="background: linear-gradient(135deg, #f6f9fc, #eef2f7); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s;">
+                <div style="width: 90px; height: 90px; background: white; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <span style="font-size: 2.5rem;">🌟</span>
+                </div>
+                <h3 style="margin-bottom: 15px; color: #333;">Excellence</h3>
+                <p style="color: #555; line-height: 1.6;">We pursue the highest standards in everything we do, constantly striving to exceed expectations.</p>
+            </div>
+            
+            <!-- Value 4 -->
+            <div class="value-card scroll-reveal" style="background: linear-gradient(135deg, #f6f9fc, #eef2f7); border-radius: 10px; padding: 30px; text-align: center; transition: all 0.3s;">
+                <div style="width: 90px; height: 90px; background: white; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                    <span style="font-size: 2.5rem;">🌍</span>
+                </div>
+                <h3 style="margin-bottom: 15px; color: #333;">Sustainability</h3>
+                <p style="color: #555; line-height: 1.6;">We're committed to practices that create lasting positive impact for our clients, communities, and the planet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<!-- <section class="scroll-reveal" style="padding: 80px 0; background: #f8f9fa;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+        <h2 style="margin-bottom: 20px; color: #333; font-size: 2.2rem;">Our Leadership Team</h2>
+        <p style="color: #666; max-width: 700px; margin: 0 auto 50px;">Meet the dedicated professionals who guide our vision and drive our success.</p>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <div class="team-card scroll-reveal" style="flex: 1; min-width: 250px; max-width: 280px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <div style="height: 280px; background: url('{% static 'img/team-1.jpg' %}') center/cover;"></div>
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 5px; color: #333;">Sarah Johnson</h3>
+                    <p style="color: #8e44ad; margin-bottom: 15px; font-weight: 500;">Chief Executive Officer</p>
+                    <p style="color: #666; font-size: 0.9rem;">With over 15 years of industry experience, Sarah leads our company with vision and dedication.</p>
+                </div>
+            </div>
+            
+            <div class="team-card scroll-reveal" style="flex: 1; min-width: 250px; max-width: 280px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <div style="height: 280px; background: url('{% static 'img/team-2.jpg' %}') center/cover;"></div>
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 5px; color: #333;">Michael Chen</h3>
+                    <p style="color: #2980b9; margin-bottom: 15px; font-weight: 500;">Chief Technology Officer</p>
+                    <p style="color: #666; font-size: 0.9rem;">Michael's innovative approach drives our technological advancements and product development.</p>
+                </div>
+            </div>
+            
+            <div class="team-card scroll-reveal" style="flex: 1; min-width: 250px; max-width: 280px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <div style="height: 280px; background: url('{% static 'img/team-3.jpg' %}') center/cover;"></div>
+                <div style="padding: 20px;">
+                    <h3 style="margin-bottom: 5px; color: #333;">Elena Rodriguez</h3>
+                    <p style="color: #27ae60; margin-bottom: 15px; font-weight: 500;">Chief Operating Officer</p>
+                    <p style="color: #666; font-size: 0.9rem;">Elena ensures operational excellence and strategic implementation across all departments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call to Action -->
+<section class="scroll-reveal" style="padding: 80px 0; background: linear-gradient(120deg, #2980b9, #8e44ad); color: white; text-align: center;">
+    <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+        <h2 style="margin-bottom: 20px; font-size: 2.5rem;">Ready to Work With Us?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">Join the many satisfied clients who have transformed their business with our solutions.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" style="display: inline-block; background: white; color: #8e44ad; padding: 14px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">Contact Us</a>
+            <a href="#" style="display: inline-block; background: transparent; color: white; padding: 14px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; transition: all 0.3s; border: 2px solid white;">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Add JavaScript for animations -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initial animations
+        document.querySelectorAll('.fade-in').forEach(function(element, index) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            
+            setTimeout(function() {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, 300 + (index * 200));
+        });
+        
+        // Scroll animations
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        const scrollRevealLeftElements = document.querySelectorAll('.scroll-reveal-left');
+        const scrollRevealRightElements = document.querySelectorAll('.scroll-reveal-right');
+        
+        function checkScroll() {
+            scrollRevealElements.forEach(function(element) {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.85) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+            
+            scrollRevealLeftElements.forEach(function(element) {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.85) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+            
+            scrollRevealRightElements.forEach(function(element) {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight * 0.85) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateX(0)';
+                }
+            });
+        }
+        
+        // Set initial state for scroll elements
+        scrollRevealElements.forEach(function(element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+        
+        scrollRevealLeftElements.forEach(function(element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateX(-50px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+        
+        scrollRevealRightElements.forEach(function(element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateX(50px)';
+            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        });
+        
+        // Hover effects for cards
+        document.querySelectorAll('.info-card, .team-card, .value-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+        
+        // Animated background shapes
+        document.querySelectorAll('.shape').forEach(function(shape, index) {
+            shape.style.animationDelay = (index * 2) + 's';
+        });
+        
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes float {
+                0% { transform: translateY(0) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(5deg); }
+                100% { transform: translateY(0) rotate(0deg); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Check elements on load and scroll
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+    });
+</script>
+{% endblock %}

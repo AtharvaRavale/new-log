@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - My Django Website{% endblock %}
+<!-- {% block extra_css %}
+
+{% endblock %} -->
+
+{% block content %}
+<!-- Enhanced Services Section with Parallax Effect -->
+<section id="services" class="scroll-reveal py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold position-relative d-inline-block">Our Premium Services</h2>
+            <p class="text-muted mt-3">Comprehensive logistics solutions tailored to your business needs</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Service Card 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card h-100">
+                    <div class="service-image" style="background-image: url('{% static 'img/air.jpg' %}')">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content p-4">
+                        <h3 class="mb-3">Air Freight</h3>
+                        <p class="mb-4">Transportation of goods via aircraft, typically used for fast, time-sensitive, and high-value shipments across continents.</p>
+                        <a href="{% url 'air_freight' %}" class="service-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card h-100">
+                    <div class="service-image" style="background-image: url('{% static 'img/ocean.jpg' %}')">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content p-4">
+                        <h3 class="mb-3">Ocean Freight</h3>
+                        <p class="mb-4">Transportation of goods via cargo ships across seas and oceans, making it the most cost-effective option for bulk shipments.</p>
+                        <a href="{% url 'ocean_freight' %}" class="service-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card h-100">
+                    <div class="service-image" style="background-image: url('{% static 'img/ware.jpg' %}')">
+                        <div class="service-overlay"></div>
+                    </div>
+                    <div class="service-content p-4">
+                        <h3 class="mb-3">Warehousing</h3>
+                        <p class="mb-4">Storing goods before distribution or sale, our warehouses play a crucial role in supply chain management with advanced facilities.</p>
+                        <a href="{% url 'warehousing' %}" class="service-link">Learn More <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modernized About Us Section -->
+<section class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="about-image-wrapper">
+                    <img src="{% static 'img/sp-logo-crop.jpg' %}" alt="About Us" class="img-fluid about-image">
+                    <div class="floating-badge" style="margin-bottom: 30px;">
+                        <span>25+</span>
+                        <small>Years Experience</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="about-content">
+                    <h6 class="text-accent fw-bold mb-3">ABOUT OUR COMPANY</h6>
+                    <h2 class="fw-bold mb-4">Global Logistics Solutions You Can Trust</h2>
+                    <p class="mb-4">Our mission is to deliver exceptional value through innovative logistics solutions that empower our clients worldwide. With decades of industry experience, we've built a reputation for excellence and reliability.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Global Network</h5>
+                                <p>Operating in over 120 countries with local expertise</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h5>Customer-Centric Approach</h5>
+                                <p>Tailored solutions to meet your specific needs</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="{% url 'our_company' %}" class="btn btn-primary mt-4">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section py-5">
+    <div class="container">
+        <div class="stats-wrapper">
+            <div class="row g-0">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number">120+</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">Satisfied Clients</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Shipments Yearly</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold position-relative d-inline-block">Get in Touch</h2>
+            <p class="text-muted mt-3 mb-5">Have questions or ready to start? Our team is here to help you achieve your logistics goals.</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Contact Card 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="mt-4 mb-3">Call Us</h3>
+                    <p class="mb-0">7900019096</p>
+                </div>
+            </div>
+            
+            <!-- Contact Card 2 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="mt-4 mb-3">Email Us</h3>
+                    <p class="mb-0">atharva</p>
+                </div>
+            </div>
+            
+            <!-- Contact Card 3 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="contact-card text-center">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="mt-4 mb-3">Visit Us</h3>
+                    <p class="mb-0">shyamnagar<br>jogeshwari,mumbai</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="text-center mt-5" data-aos="fade-up">
+            <a href="{% url 'contact_us' %}" class="btn btn-primary">Contact Us Now</a>
+        </div> -->
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-wrapper">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="text-white mb-2">Ready to optimize your logistics?</h3>
+                    <p class="text-white mb-0">Let's discuss how we can help streamline your supply chain.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="{% url 'contact_us' %}" class="btn btn-light">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+        
+        // Parallax effect for service cards
+        const serviceCards = document.querySelectorAll('.service-card');
+        
+        serviceCards.forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const xPercent = (x / rect.width - 0.5) * 20;
+                const yPercent = (y / rect.height - 0.5) * 20;
+                
+                this.style.transform = `perspective(1000px) rotateY(${xPercent}deg) rotateX(${-yPercent}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateY(0) rotateX(0) scale3d(1, 1, 1)';
+            });
+        });
+        
+        // Counter animation for stats
+        const stats = document.querySelectorAll('.stat-number');
+        let counted = false;
+        
+        function startCounting() {
+            if (counted) return;
+            
+            stats.forEach(stat => {
+                const target = parseInt(stat.textContent);
+                const suffix = stat.textContent.indexOf('+') !== -1 ? '+' : '';
+                
+                let count = 0;
+                const increment = Math.ceil(target / 50);
+                const duration = 2000; // 2 seconds
+                const interval = duration / (target / increment);
+                
+                const counter = setInterval(() => {
+                    count += increment;
+                    
+                    if (count >= target) {
+                        stat.textContent = target + suffix;
+                        clearInterval(counter);
+                    } else {
+                        stat.textContent = count + suffix;
+                    }
+                }, interval);
+            });
+            
+            counted = true;
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounting();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Transportation & Distribution Services - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<!-- <section class="py-5 bg-light rounded-3 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/400') center/cover no-repeat;">
+    <div class="container py-5">
+        <div class="row">
+            
+        </div>
+    </div>
+</section> -->
+<div class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="{% static 'img/tr-diss.jpg' %}" alt="Warehousing Services" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,0.5);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-white" data-aos="fade-right">
+                        <h1 class="fw-bold mb-4">Transportation & Distribution Solutions</h1>
+                        <p class="lead">Efficient, reliable and tech-driven logistics networks to keep your supply chain moving</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Service Overview -->
+<section class="mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="{% static 'img/fleet.jpg' %}" alt="Transportation Fleet" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="section-title fw-bold">End-to-End Transport Solutions</h2>
+            <p class="my-4">Our comprehensive transportation and distribution services connect your business to markets worldwide with speed and reliability. We leverage advanced technologies and an extensive fleet to ensure your cargo moves efficiently across the global supply chain.</p>
+            <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-truck text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Global Reach, Local Expertise</h5>
+                    <p class="mb-0 text-muted">Operating in over 120 countries with local knowledge</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fas fa-shipping-fast text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Time-Definite Deliveries</h5>
+                    <p class="mb-0 text-muted">Guaranteed delivery windows to meet your deadlines</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Features Cards -->
+<section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Transportation Services</h2>
+    
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/road-fleet.jpg' %}" class="card-img-top" alt="Road Freight">
+                <div class="card-body text-center">
+                    <i class="fas fa-truck-moving service-icon"></i>
+                    <h4>Road Freight</h4>
+                    <p>Extensive fleet of vehicles for local, national and cross-border transport with real-time tracking capabilities.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/intermodal.jpg' %}" class="card-img-top" alt="Intermodal Solutions">
+                <div class="card-body text-center">
+                    <i class="fas fa-exchange-alt service-icon"></i>
+                    <h4>Intermodal Solutions</h4>
+                    <p>Seamless integration of rail, road, and maritime transport for cost-effective and sustainable logistics.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/last-mile-delivery-service.webp' %}" class="card-img-top" alt="Last Mile Delivery">
+                <div class="card-body text-center">
+                    <i class="fas fa-box service-icon"></i>
+                    <h4>Last Mile Delivery</h4>
+                    <p>Specialized final-leg delivery services with flexible scheduling options and proof of delivery systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Section -->
+<section class="bg-light p-5 rounded-3 my-5" data-aos="fade-up">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+            <img src="{% static 'img/tech.webp' %}" alt="Logistics Technology" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <h2 class="fw-bold mb-4">Technology-Driven Distribution</h2>
+            <p>Our advanced tracking systems, AI-powered route optimization, and integrated management platforms ensure complete visibility and efficiency throughout your supply chain.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary rounded-circle p-2 me-3 text-white">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <span>Real-time GPS Tracking</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary rounded-circle p-2 me-3 text-white">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <span>Mobile Notifications</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary rounded-circle p-2 me-3 text-white">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <span>Performance Analytics</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary rounded-circle p-2 me-3 text-white">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span>AI Route Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Client Quote -->
+<!-- <section class="my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card border-0 shadow-sm" data-aos="fade-up">
+                <div class="card-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 text-center mb-4 mb-md-0">
+                            <img src="/api/placeholder/200/200" alt="Client" class="rounded-circle img-fluid mb-3" style="max-width: 150px;">
+                            <h5 class="mb-1">John Smith</h5>
+                            <p class="text-muted">Supply Chain Director, ABC Corp</p>
+                        </div>
+                        <div class="col-md-8">
+                            <i class="fas fa-quote-left fa-2x text-primary opacity-25 mb-3"></i>
+                            <p class="lead">"Their transportation network has transformed our distribution strategy. We've reduced transit times by 22% and improved on-time delivery rates to 99.8%. The real-time visibility across our entire supply chain has been a game-changer."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- CTA Section -->
+<section class="bg-primary text-white p-5 rounded-3 my-5 text-center" data-aos="fade-up">
+    <h2 class="fw-bold mb-4">Ready to Optimize Your Transportation Network?</h2>
+    <p class="lead mb-4">Our logistics experts will create a customized solution for your business needs</p>
+    <div>
+        <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg me-2 px-4">Get a Quote</a>
+        <!-- <a href="#" class="btn btn-outline-light btn-lg px-4">Download Brochure</a> -->
+    </div>
+</section>
+
+<!-- Fleet Showcase -->
+<section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Premium Fleet</h2>
+    
+    <div class="row g-4">
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'img/lite-com.jpeg' %}" class="card-img-top" alt="Light Commercial Vehicles">
+                <div class="card-body text-center py-3">
+                    <h6 class="card-title mb-0">Light Commercial</h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'img/temp-con.jpg' %}" class="card-img-top" alt="Temperature Controlled">
+                <div class="card-body text-center py-3">
+                    <h6 class="card-title mb-0">Temperature Controlled</h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'img/heavy.webp' %}" class="card-img-top" alt="Heavy Haul">
+                <div class="card-body text-center py-3">
+                    <h6 class="card-title mb-0">Heavy Haul</h6>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card border-0 shadow-sm">
+                <img src="{% static 'img/flat.png' %}" class="card-img-top" alt="Flatbed Trailers">
+                <div class="card-body text-center py-3">
+                    <h6 class="card-title mb-0">Flatbed Trailers</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

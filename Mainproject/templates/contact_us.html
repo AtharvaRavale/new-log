@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact Us - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Contact Us Hero Section -->
+<section class="py-5 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <h1 class="fw-bold section-title mb-4">Get In Touch</h1>
+                <p class="lead text-muted">We're here to answer any questions you might have about our services. Reach out to us and we'll respond as soon as we can.</p>
+                
+                <div class="mt-5">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary rounded-circle p-3 me-3 text-white">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Visit Our Office</h5>
+                            <p class="mb-0 text-muted">123 Logistics Avenue, Mumbai, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="bg-primary rounded-circle p-3 me-3 text-white">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Call Us</h5>
+                            <p class="mb-0 text-muted">+91 7900019096</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary rounded-circle p-3 me-3 text-white">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Email Us</h5>
+                            <p class="mb-0 text-muted">hello@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="mt-5">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="me-3 btn btn-outline-primary rounded-circle p-2">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="me-3 btn btn-outline-primary rounded-circle p-2">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="me-3 btn btn-outline-primary rounded-circle p-2">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="me-3 btn btn-outline-primary rounded-circle p-2">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="col-lg-6" data-aos="fade-left">
+                <div class="card border-0 shadow-lg rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="fw-bold mb-4">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="+91 1234567890">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="" selected disabled>Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="quote">Request a Quote</option>
+                                        <option value="support">Customer Support</option>
+                                        <option value="partnership">Partnership Opportunities</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" required>
+                                        <label class="form-check-label" for="privacy">
+                                            I agree to the <a href="#">privacy policy</a> and <a href="#">terms of service</a>.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100 py-3">
+                                        <i class="fas fa-paper-plane me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="mb-5" data-aos="fade-up">
+    <div class="container">
+        <div class="card border-0 shadow-sm overflow-hidden">
+            <div class="ratio ratio-21x9">
+                <!-- Replace with your actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.71637333491243!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sus!4v1615472306964!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="mb-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="text-muted">Find quick answers to common questions</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                How quickly can you respond to my inquiry?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call our customer service line directly.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                How can I get a quote for your services?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                You can request a quote by filling out our contact form and selecting "Request a Quote" from the subject dropdown. Alternatively, you can call our sales team directly.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Do you offer services internationally?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we operate in over 120 countries worldwide. Our global network ensures that we can provide logistics solutions no matter where you need to ship to or from.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Form submission script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally send the form data to your backend
+            
+            // For demo purposes, show success message
+            const formElements = form.elements;
+            for (let i = 0; i < formElements.length; i++) {
+                formElements[i].disabled = true;
+            }
+            
+            // Replace form with success message
+            form.innerHTML = `
+                <div class="text-center py-5">
+                    <div class="mb-4">
+                        <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
+                    </div>
+                    <h3 class="mb-3">Thank You!</h3>
+                    <p class="lead">Your message has been sent successfully. We'll get back to you shortly.</p>
+                </div>
+            `;
+        });
+    });
+</script>
+{% endblock %}

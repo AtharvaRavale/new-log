@@ -1,0 +1,1251 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Django Website{% endblock %}</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        /* Custom styles */
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #198754;
+            --box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: #444;
+            line-height: 1.6;
+        }
+        
+        /* Improved Navbar */
+        .navbar {
+            transition: var(--transition);
+            padding: 15px 0;
+            background-color:white  !important;
+        }
+        
+        .navbar.scrolled {
+            padding: 8px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            height: 120px;
+            transition: var(--transition);
+        }
+        
+        .navbar-scrolled .logo {
+            height: 50px;
+        }
+        
+        .nav-item {
+            margin: 0 5px;
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 8px 15px !important;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--dark) !important;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 70%;
+        }
+        
+        .dropdown-menu {
+            border: none;
+            box-shadow: var(--box-shadow);
+            border-radius: 10px;
+        }
+        
+        .dropdown-item {
+            padding: 8px 20px;
+            transition: var(--transition);
+        }
+        
+        .dropdown-item:hover {
+            background-color: var(--light);
+            transform: translateX(5px);
+        }
+        
+        /* Enhanced Hero Section */
+        .hero-section {
+            height: 90vh; /* Increased height */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        /* .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(214, 217, 222, 0.85), rgba(250, 250, 251, 0.6)); Gradient overlay
+            z-index: -1;
+        } */
+        
+        .hero-section h1 {
+            font-size: 3.5rem; /* Larger font */
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section .lead {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+        }
+        
+        /* Improved Service Cards */
+        .service-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            height: 100%;
+            border: none;
+            background: white;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        /* Updated Partner Section - NO HOVER EFFECT */
+        .partner-section {
+            background-color: var(--light);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .partner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(13, 110, 253, 0.3), transparent);
+        }
+        
+        .carousel-item img {
+            height: 100px;
+            object-fit: contain;
+            filter: grayscale(40%); /* Reduced grayscale for more color */
+            opacity: 0.9; /* Increased opacity */
+            transition: none; /* Removed transition effect */
+        }
+        
+        /* Removed hover effect for carousel items */
+        
+        /* Enhanced Footer */
+        footer {
+            background: linear-gradient(to right, #212529, #343a40);
+            color: white;
+            padding: 70px 0 20px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #6610f2);
+        }
+        
+        .footer-links h5 {
+            font-weight: 600;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .footer-links h5:after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+            padding-left: 2px;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            text-decoration: none;
+            padding-left: 5px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #343a40;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            transition: var(--transition);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            border-top: 1px solid #343a40;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+        
+        /* Enhanced Buttons */
+        .btn {
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            width: 100%;
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+        }
+        
+        .contact-btn {
+            background: linear-gradient(to right, var(--primary), #0b5ed7);
+            color: white !important;
+            border-radius: 30px;
+            padding: 10px 25px !important;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+        }
+        
+        .contact-btn:hover {
+            background: linear-gradient(to right, #0b5ed7, var(--primary));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
+        }
+        
+        .contact-btn:after {
+            display: none;
+        }
+        
+        /* Improved About Section */
+        .about-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            position: relative;
+        }
+        
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 80px;
+            height: 80px;
+            border-top: 5px solid var(--primary);
+            border-left: 5px solid var(--primary);
+            z-index: -1;
+        }
+        
+        .about-img::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: -15px;
+            width: 80px;
+            height: 80px;
+            border-bottom: 5px solid var(--primary);
+            border-right: 5px solid var(--primary);
+            z-index: -1;
+        }
+        
+        /* Enhanced Stats Section */
+        .stats-section {
+            background: linear-gradient(rgba(248, 249, 250, 0.9), rgba(248, 249, 250, 0.9)), url('/api/placeholder/1200/400') center/cover no-repeat;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+        
+        .stat-item {
+            padding: 30px 20px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stat-label {
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .carousel-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    background: white; /* Set background if needed */
+    padding: 10px 0;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 20px; /* Adjust spacing between logos */
+    animation: scroll 20s linear infinite;
+    width: max-content; /* Prevents wrapping */
+}
+
+.carousel-track img {
+    height: 80px; /* Adjust size as needed */
+    width: auto;
+    display: inline-block;
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* .navbar-brand img {
+    height: 50px; /* Adjust logo size 
+} */
+
+.navbar {
+    padding: 12px 0;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+.navbar .btn {
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+
+/* Global Styles */
+:root {
+  --primary-color: #1a73e8;
+  --primary-dark: #0d47a1;
+  --secondary-color: #34a853;
+  --accent-color: #fbbc04;
+  --dark-color: #202124;
+  --light-color: #f8f9fa;
+  --gray-color: #70757a;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(26, 115, 232, 0.3);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* Services Section */
+#services {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#services h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.service-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
+}
+
+.service-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+}
+
+.service-content p {
+  flex: 1;
+  color: var(--gray-color);
+}
+
+.service-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.service-link:hover {
+  color: var(--primary-dark);
+  transform: translateX(5px);
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.about-image-wrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about-image {
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.floating-badge {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(251, 188, 4, 0.3);
+  text-align: center;
+}
+
+.floating-badge span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.floating-badge small {
+  font-size: 0.9rem;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.feature-list {
+  margin-top: 30px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(26, 115, 232, 0.1);
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  color: var(--primary-color);
+}
+
+.feature-text h5 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.feature-text p {
+  margin-bottom: 0;
+  color: var(--gray-color);
+}
+
+/* Stats Section */
+.stats-section {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+.stats-wrapper {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.stat-item {
+  padding: 40px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.stat-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.stat-item:hover .stat-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--gray-color);
+  transition: var(--transition);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.contact-section h2:after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.contact-card {
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  height: 100%;
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(26, 115, 232, 0.1);
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+.contact-card:hover .contact-icon {
+  background-color: var(--primary-color);
+}
+
+.contact-icon i {
+  font-size: 32px;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.contact-card:hover .contact-icon i {
+  color: white;
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+}
+
+.cta-wrapper {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.cta-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 10px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-light:hover {
+  background-color: var(--light-color);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .feature-item {
+    margin-bottom: 15px;
+  }
+  
+  .floating-badge {
+    right: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  #services h2, 
+  .about-content h2 {
+    font-size: 2rem;
+  }
+  
+  .service-image {
+    height: 180px;
+  }
+  
+  .cta-wrapper {
+    padding: 30px 20px;
+  }
+  
+  .cta-section h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation Classes */
+.scroll-reveal {
+  overflow: hidden;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+
+    </style>
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/sp-logo-crop.jpg' %}" alt="Logo" class="logo">
+            </a>
+    
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
+                    </li>
+    
+                    
+    
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'air_freight' %}">Air Freight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ocean_freight' %}">Ocean Freight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contract_logistics' %}">Contract Logistics</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cargo_insurance' %}">Cargo Insurance</a></li>
+                            <li><a class="dropdown-item" href="{% url 'custom_clearance' %}">Custom Clearance</a></li>
+                            <li><a class="dropdown-item" href="{% url 'warehousing' %}">Warehousing</a></li>
+                            <li><a class="dropdown-item" href="{% url 'packaging_services' %}">Packaging and Value Added Services</a></li>
+                            <li><a class="dropdown-item" href="{% url 'transportation_distribution' %}">Transportation and Distribution</a></li>
+                            <li><a class="dropdown-item" href="{% url 'project_heavy_lift' %}">Project and Heavy Lift</a></li>
+                            <li><a class="dropdown-item" href="{% url 'distribution_logistics' %}">Distribution and Logistics Management</a></li>
+                        </ul>
+                    </li>
+                    <!-- About Us as a button -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'our_company' %}">About Us</a>
+                    </li>
+                    
+    
+                    <!-- Contact Us -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'img/sp-logo.jpg' %}" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                    
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{% url 'our_company' %}">About Us</a>
+                    </li>
+                </ul>
+                
+               <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                     -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About Us</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'our_company' %}">Our Company</a></li>
+                            <li><a class="dropdown-item" href="{% url 'core_values' %}">Core Values</a></li>
+                            <li><a class="dropdown-item" href="{% url 'chairman_statement' %}">Chairman Statement</a></li>
+                            <li><a class="dropdown-item" href="{% url 'press_release' %}">Press Release</a></li>
+                            <li><a class="dropdown-item" href="{% url 'event_gallery' %}">Event & Gallery</a></li>
+                        </ul>
+                    </li> 
+
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'air_freight' %}">Air Freight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'ocean_freight' %}">Ocean Freight</a></li>
+                            <li><a class="dropdown-item" href="{% url 'contract_logistics' %}">Contract Logistics</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cargo_insurance' %}">Cargo Insurance</a></li>
+                            <li><a class="dropdown-item" href="{% url 'custom_clearance' %}">Custom Clearance</a></li>
+                            <li><a class="dropdown-item" href="{% url 'warehousing' %}">Warehousing</a></li>
+                            <li><a class="dropdown-item" href="{% url 'packaging_services' %}">Packaging and Value Added Services</a></li>
+                            <li><a class="dropdown-item" href="{% url 'transportation_distribution' %}">Transportation and Distribution</a></li>
+                            <li><a class="dropdown-item" href="{% url 'project_heavy_lift' %}">Project and Heavy Lift</a></li>
+                            <li><a class="dropdown-item" href="{% url 'distribution_logistics' %}">Distribution and Logistics Management</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item"><a class="nav-link contact-btn" href="{% url 'contact_us' %}">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    
+    
+    <!-- Hero Section with Video Background -->
+    <section class="hero-section">
+        <!-- Video Background -->
+        <video class="video-background" autoplay muted loop>
+            <source src="{% static 'vid/bg.mp4' %}"  type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Blue Overlay -->
+        <div class="overlay"></div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 >Global Logistics Solutions for Your Business</h1>
+                    <p class="lead mb-4" style="color: black; font-size: 20px;">Innovative, reliable and efficient logistics 
+                        services tailored to meet your business needs worldwide.</p>
+                    <!-- <a href="#" class="btn btn-light btn-lg px-4 me-2">Our Services</a> -->
+                    <a href="{% url 'contact_us' %}" class="btn btn-outline-light btn-lg px-4">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <div class="container mt-5 py-5">
+        {% block content %}
+        <!-- Featured Services Section -->
+        <section>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Our Premium Services</h2>
+                <p class="text-muted">Comprehensive logistics solutions to optimize your supply chain</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card service-card p-4 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-plane service-icon"></i>
+                            <h4 class="card-title">Air Freight</h4>
+                            <p class="card-text">Fast and reliable air transportation solutions for time-critical shipments worldwide.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card service-card p-4 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-ship service-icon"></i>
+                            <h4 class="card-title">Ocean Freight</h4>
+                            <p class="card-text">Cost-effective ocean shipping services for all your international cargo needs.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card service-card p-4 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-warehouse service-icon"></i>
+                            <h4 class="card-title">Warehousing</h4>
+                            <p class="card-text">Strategic warehousing solutions with flexible storage options and inventory management.</p>
+                            <a href="#" class="btn btn-outline-primary mt-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="my-5 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="/api/placeholder/600/400" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="fw-bold mb-4">Experience Excellence in Global Logistics</h2>
+                    <p>With decades of industry expertise, we provide comprehensive logistics solutions that optimize your supply chain and drive business growth. Our dedicated team ensures seamless operations across continents.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Global network spanning 120+ countries</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Industry-leading technology platform</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> Customized solutions for every business</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> 24/7 customer support worldwide</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary px-4 mt-3">Discover More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <section class="bg-light py-5 my-5 rounded" data-aos="fade-up">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <div class="display-4 fw-bold text-primary">25+</div>
+                        <p class="text-muted">Years Experience</p>
+                    </div>
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <div class="display-4 fw-bold text-primary">120+</div>
+                        <p class="text-muted">Countries Served</p>
+                    </div>
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <div class="display-4 fw-bold text-primary">5000+</div>
+                        <p class="text-muted">Satisfied Clients</p>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="display-4 fw-bold text-primary">1M+</div>
+                        <p class="text-muted">Shipments Annually</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </div>
+    
+    <!-- Partner Section -->
+    <section class="partner-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Our Trusted Partners</h2>
+                <p class="text-muted">Collaborating with industry leaders worldwide</p>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <img src="{% static 'img/wca-logo1.jpg' %}" alt="Partner 1">
+                    <img src="{% static 'img/mto-logo2.jpg' %}" alt="Partner 2">
+                    <img src="{% static 'img/aeo-logo3.jpg' %}" alt="Partner 3">
+                    <img src="{% static 'img/fiata-logo4.png' %}" alt="Partner 4">
+                    <img src="{% static 'img/mpl-logo.jpg' %}" alt="Partner 5">
+                    <img src="{% static 'img/fmc-logo6.png' %}" alt="Partner 6">
+                    <img src="{% static 'img/iata-logo7.jpg' %}" alt="Partner 7">
+                    <img src="{% static 'img/acfi-logo8.webp' %}" alt="Partner 8">
+                    <img src="{% static 'img/aon-logo9.webp' %}" alt="Partner 9">
+                    <img src="{% static 'img/x2-logo10.png' %}" alt="Partner 10">
+                    <img src="{% static 'img/logo-iso11.jpg' %}" alt="Partner 11">
+                    <img src="{% static 'img/aeo-logo12.jpg' %}" alt="Partner 12">
+                    <img src="{% static 'img/ag-logo13.jpg' %}" alt="Partner 13">
+                    <img src="{% static 'img/cgln-logo14.jpg' %}" alt="Partner 14">
+
+
+
+
+                    <img src="{% static 'img/wca-logo1.jpg' %}" alt="Partner 1">
+                    <img src="{% static 'img/mto-logo2.jpg' %}" alt="Partner 2">
+                    <img src="{% static 'img/aeo-logo3.jpg' %}" alt="Partner 3">
+                    <img src="{% static 'img/fiata-logo4.png' %}" alt="Partner 4">
+                    <img src="{% static 'img/mpl-logo.jpg' %}" alt="Partner 5">
+                    <img src="{% static 'img/fmc-logo6.png' %}" alt="Partner 6">
+                    <img src="{% static 'img/iata-logo7.jpg' %}" alt="Partner 7">
+                    <img src="{% static 'img/acfi-logo8.webp' %}" alt="Partner 8">
+                    <img src="{% static 'img/aon-logo9.webp' %}" alt="Partner 9">
+                    <img src="{% static 'img/x2-logo10.png' %}" alt="Partner 10">
+                    <img src="{% static 'img/logo-iso11.jpg' %}" alt="Partner 11">
+                    <img src="{% static 'img/aeo-logo12.jpg' %}" alt="Partner 12">
+                    <img src="{% static 'img/ag-logo13.jpg' %}" alt="Partner 13">
+                    <img src="{% static 'img/cgln-logo14.jpg' %}" alt="Partner 14">
+            
+                </div>
+            </div>
+            
+                <button class="carousel-control-prev" type="button" data-bs-target="#collaborationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#collaborationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="{% static 'img/sp-logo.jpg' %}" alt="Logo" class="logo mb-4" >
+                    <p>Providing innovative logistics solutions that connect businesses around the world. We deliver excellence, reliability, and efficiency in every shipment.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="{% url 'air_freight' %}">Air Freight</a></li>
+                        <li><a href="{% url 'air_freight' %}">Ocean Freight</a></li>
+                        <li><a href="{% url 'air_freight' %}">Contract Logistics</a></li>
+                        <li><a href="{% url 'air_freight' %}">Warehousing</a></li>
+                        <li><a href="{% url 'air_freight' %}">Custom Clearance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="{% url 'air_freight' %}">About Us</a></li>
+                        <li><a href="{% url 'air_freight' %}">Core Values</a></li>
+                        <li><a href="{% url 'air_freight' %}">Leadership</a></li>
+                        <li><a href="{% url 'air_freight' %}">Careers</a></li>
+                        <li><a href="{% url 'air_freight' %}">News & Media</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 footer-links">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> jogeshwari, mum, India</li>
+                        <li><i class="fas fa-phone-alt me-2"></i> 7900019096</li>
+                        <li><i class="fas fa-envelope me-2"></i> hello</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="{% url 'contact_us' %}" class="btn btn-primary px-4">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center copyright">
+                <p>&copy; 2025 My Django Website. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+        
+        // In a real implementation, you would need to replace the video src with your actual video file
+        // For now, this is just a placeholder - replace with your actual video in production
+        document.addEventListener("DOMContentLoaded", function() {
+            // Fallback for the video if it doesn't load
+            const video = document.querySelector('.video-background');
+            video.addEventListener('error', function() {
+                video.style.display = 'none';
+                document.querySelector('.hero-section').style.background = 'linear-gradient(135deg, #0d6efd, #0dcaf0)';
+            });
+        });
+    </script>
+</body>
+</html>

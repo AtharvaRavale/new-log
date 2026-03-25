@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Distribution & Logistics Management - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<!-- <section class="py-5 bg-light rounded-3 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400') center/cover no-repeat;">
+    <div class="container py-5">
+        <div class="row">
+            
+            
+        </div>
+    </div>
+</section> -->
+<section class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="{% static 'img/dis-main.jpg' %}" alt="Warehousing Services" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,0.5);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-white" data-aos="fade-right">
+                        <div class="col-lg-7 text-white" data-aos="fade-right">
+                            <h1 class="fw-bold mb-4">Distribution & Logistics Management</h1>
+                            <p class="lead">End-to-end supply chain solutions optimizing your distribution network and logistics operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="{% static 'img/dis-cen.jpg' %}" alt="Distribution Center Operations" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="section-title fw-bold">Integrated Logistics Solutions</h2>
+            <p class="my-4">We provide comprehensive distribution and logistics management services designed to streamline operations, reduce costs, and accelerate delivery timelines. Our team combines industry expertise with cutting-edge technology to optimize every aspect of your supply chain.</p>
+            <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-chart-line text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Performance-Driven Management</h5>
+                    <p class="mb-0 text-muted">Data-backed strategies to maximize efficiency and ROI</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fas fa-network-wired text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Seamless Integration</h5>
+                    <p class="mb-0 text-muted">Solutions that connect with your existing systems and processes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="my-5 py-3">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Distribution & Logistics Services</h2>
+    
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/ware-man.png' %}" class="card-img-top" alt="Warehouse Management">
+                <div class="card-body text-center">
+                    <i class="fas fa-warehouse service-icon"></i>
+                    <h4>Warehouse Management</h4>
+                    <p>Optimized storage solutions, inventory control, and efficient fulfillment operations to maximize space utilization.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/trans-man.jpg' %}" class="card-img-top" alt="Transportation Management">
+                <div class="card-body text-center">
+                    <i class="fas fa-truck service-icon"></i>
+                    <h4>Transportation Management</h4>
+                    <p>Carrier selection, route optimization, fleet management, and real-time tracking for cost-effective shipping.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/suppl_chain.webp' %}" class="card-img-top" alt="Supply Chain Visibility">
+                <div class="card-body text-center">
+                    <i class="fas fa-eye service-icon"></i>
+                    <h4>Supply Chain Visibility</h4>
+                    <p>End-to-end tracking, real-time analytics, and customized reporting for complete supply chain transparency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Section -->
+<section class="bg-light p-5 rounded-3 my-5" data-aos="fade-up">
+    <h2 class="text-center fw-bold mb-5">Powered by Advanced Technology</h2>
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-robot text-primary mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Warehouse Automation</h5>
+                    <p class="mb-0">Robotic systems and smart conveyor solutions that increase throughput and accuracy.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-cloud text-primary mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Cloud-Based WMS</h5>
+                    <p class="mb-0">Scalable warehouse management systems providing real-time inventory visibility.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-sitemap text-primary mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Route Optimization</h5>
+                    <p class="mb-0">AI-powered solutions that minimize miles, fuel consumption, and delivery times.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-tablet-alt text-primary mb-3" style="font-size: 2.5rem;"></i>
+                    <h5>Mobile Solutions</h5>
+                    <p class="mb-0">Field-ready applications for drivers, warehouse staff, and management teams.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Sectors -->
+<section class="my-5" data-aos="fade-up">
+    <h2 class="text-center fw-bold mb-5">Industries We Serve</h2>
+    <div class="row g-4 text-center">
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-shopping-cart text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Retail</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-hamburger text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Food & Beverage</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-pills text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Pharmaceuticals</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-microchip text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Electronics</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-car text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Automotive</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-tshirt text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Apparel</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-box text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>E-Commerce</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-tools text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Industrial Goods</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Studies -->
+<!-- <section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Success Stories</h2>
+    
+    <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="/api/placeholder/400/300" class="img-fluid rounded-start h-100" alt="E-Commerce Fulfillment" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <h5 class="card-title">E-Commerce Fulfillment Optimization</h5>
+                            <p class="card-text">Reduced order processing time by 47% and cut shipping costs by 23% for a leading online retailer.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-2">E-Commerce</span>
+                                <span class="badge bg-secondary">Fulfillment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="/api/placeholder/400/300" class="img-fluid rounded-start h-100" alt="Cold Chain Logistics" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <h5 class="card-title">Cold Chain Logistics Redesign</h5>
+                            <p class="card-text">Improved temperature compliance to 99.8% while expanding distribution network for a pharmaceutical client.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-2">Pharmaceutical</span>
+                                <span class="badge bg-secondary">Temperature-Controlled</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-primary">View More Case Studies</a>
+    </div> 
+</section> -->
+
+<!-- Value Proposition -->
+<section class="bg-light p-5 rounded-3 my-5" data-aos="fade-up">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="fw-bold mb-4">Why Choose Our Logistics Services?</h2>
+            
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        <i class="fas fa-percentage text-white"></i>
+                    </div>
+                </div>
+                <div class="ms-3">
+                    <h5>Cost Reduction</h5>
+                    <p class="mb-0">Average 15-22% logistics cost savings through optimization and consolidation</p>
+                </div>
+            </div>
+            
+            <div class="d-flex mb-4">
+                <div class="flex-shrink-0">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        <i class="fas fa-bolt text-white"></i>
+                    </div>
+                </div>
+                <div class="ms-3">
+                    <h5>Speed to Market</h5>
+                    <p class="mb-0">Accelerated delivery timelines with strategic warehouse locations and optimized routes</p>
+                </div>
+            </div>
+            
+            <div class="d-flex">
+                <div class="flex-shrink-0">
+                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        <i class="fas fa-chart-pie text-white"></i>
+                    </div>
+                </div>
+                <div class="ms-3">
+                    <h5>Scalability</h5>
+                    <p class="mb-0">Flexible solutions that grow with your business and adapt to seasonal demand</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <img src="{% static 'img/net.jpg' %}" alt="Distribution Network Map" class="img-fluid rounded-3 shadow">
+        </div>
+    </div>
+</section>
+
+<!-- Key Performance Metrics -->
+<section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Performance Metrics</h2>
+    
+    <div class="row g-4 text-center">
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm h-100 py-4">
+                <div class="card-body">
+                    <h2 class="fw-bold text-primary mb-0">99.8%</h2>
+                    <p class="text-muted mb-0">Order Accuracy</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm h-100 py-4">
+                <div class="card-body">
+                    <h2 class="fw-bold text-primary mb-0">98.5%</h2>
+                    <p class="text-muted mb-0">On-Time Delivery</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card border-0 shadow-sm h-100 py-4">
+                <div class="card-body">
+                    <h2 class="fw-bold text-primary mb-0">0.4%</h2>
+                    <p class="text-muted mb-0">Damage Rate</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card border-0 shadow-sm h-100 py-4">
+                <div class="card-body">
+                    <h2 class="fw-bold text-primary mb-0">18%</h2>
+                    <p class="text-muted mb-0">Avg. Cost Reduction</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Steps -->
+<section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Distribution Management Process</h2>
+    
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="position-relative">
+                <!-- Process steps with connecting line -->
+                <div class="position-absolute top-0 start-50 translate-middle-x w-1" style="height: 100%; background-color: #e9ecef; z-index: -1;"></div>
+                
+                <!-- Step 1 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">Network Analysis</h4>
+                        <p>Comprehensive evaluation of current distribution network and identification of optimization opportunities</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <h4 class="fw-bold">Strategic Design</h4>
+                        <p>Development of customized logistics models, warehouse layouts, and transportation strategies</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">Implementation</h4>
+                        <p>Coordinated deployment of technologies, processes, and training to ensure smooth transition</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <h4 class="fw-bold">Continuous Optimization</h4>
+                        <p>Ongoing performance monitoring, data analysis, and iterative improvements to maximize efficiency</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white p-5 rounded-3 my-5 text-center" data-aos="fade-up">
+    <h2 class="fw-bold mb-4">Ready to Optimize Your Distribution Network?</h2>
+    <p class="lead mb-4">Get a comprehensive logistics assessment and customized improvement plan</p>
+    <div>
+        <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg me-2 px-4">Request Consultation</a>
+        <!-- <a href="#" class="btn btn-outline-light btn-lg px-4">Download Solutions Guide</a> -->
+    </div>
+</section>
+{% endblock %}

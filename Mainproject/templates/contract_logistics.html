@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Contract Logistics | My Django Website{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<section class="py-5 bg-light rounded-3 mb-5" style="margin-top: 80px;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="fw-bold display-5 mb-3">Contract Logistics</h1>
+                <p class="lead">Customized end-to-end logistics solutions designed to optimize your supply chain operations.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="{% static 'img/cl.webp' %}" alt="Contract Logistics" class="img-fluid rounded-3 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Key Benefits Section -->
+<section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Key Benefits</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/costeff.jpg' %}" class="card-img-top" alt="Cost Efficiency">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-chart-line fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Cost Efficiency</h4>
+                        <p class="card-text">Reduce operational costs through optimized resources and economies of scale.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/flex.jpg' %}" class="card-img-top" alt="Flexibility">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-project-diagram fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Flexibility</h4>
+                        <p class="card-text">Scalable solutions that adapt to your changing business needs and market demands.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/experts.webp' %}" class="card-img-top" alt="Expertise">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-user-tie fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Industry Expertise</h4>
+                        <p class="card-text">Leverage our specialized knowledge and best practices across various industries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Services Section -->
+<section class="py-5 bg-light rounded-3 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Our Contract Logistics Services</h2>
+        
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary rounded p-3 text-white me-4">
+                        <i class="fas fa-boxes fa-2x"></i>
+                    </div>
+                    <div>
+                        <h4>Inventory Management</h4>
+                        <p>Real-time tracking, forecasting, and optimization of your inventory levels to reduce costs while maintaining service levels.</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary rounded p-3 text-white me-4">
+                        <i class="fas fa-exchange-alt fa-2x"></i>
+                    </div>
+                    <div>
+                        <h4>Order Processing</h4>
+                        <p>Efficient order fulfillment services from receipt to delivery, including pick and pack, kitting, and quality control.</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-start">
+                    <div class="bg-primary rounded p-3 text-white me-4">
+                        <i class="fas fa-truck-loading fa-2x"></i>
+                    </div>
+                    <div>
+                        <h4>Transportation Management</h4>
+                        <p>Comprehensive transportation solutions including route optimization, carrier selection, and freight consolidation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="{% static 'img/cl2.png' %}" alt="Contract Logistics Services" class="img-fluid rounded-3 shadow w-100 h-100 object-fit-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Case Study Section -->
+<!-- <section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Success Story</h2>
+        
+        <div class="card border-0 shadow-sm rounded-3 overflow-hidden" data-aos="fade-up">
+            <div class="row g-0">
+                <div class="col-md-6">
+                    <img src="/api/placeholder/600/400" alt="Case Study" class="img-fluid h-100 w-100 object-fit-cover">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body p-4 p-lg-5">
+                        <h4 class="card-title mb-3">Global Electronics Manufacturer</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="badge bg-primary me-2">30% Cost Reduction</div>
+                            <div class="badge bg-success">99.8% On-time Delivery</div>
+                        </div>
+                        <p class="card-text">We implemented a tailored contract logistics solution for a leading electronics manufacturer, resulting in significant improvements in efficiency and customer satisfaction.</p>
+                        <p class="card-text">Our integrated approach streamlined their supply chain, reduced inventory holding costs, and enhanced visibility across their distribution network.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Read Full Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white rounded-3 mb-5">
+    <div class="container text-center" data-aos="zoom-in">
+        <h2 class="fw-bold mb-4">Ready to optimize your supply chain?</h2>
+        <p class="lead mb-4">Let our experts design a customized contract logistics solution for your business.</p>
+        <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-5">Request a Consultation</a>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<!-- <section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Frequently Asked Questions</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                What is contract logistics?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Contract logistics involves outsourcing logistics operations to a specialized provider through a customized service agreement. It typically covers warehousing, transportation, inventory management, order fulfillment, and other value-added services tailored to your specific business needs.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                How can contract logistics benefit my business?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Contract logistics can help reduce operational costs, improve service levels, provide access to specialized expertise, enhance supply chain visibility, and allow your business to focus on core competencies while we handle the logistics operations.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                How do you ensure quality control in your logistics operations?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We implement robust quality management systems with regular audits, KPI monitoring, and continuous improvement processes. Our operations adhere to international standards including ISO 9001 and industry-specific certifications to ensure consistent high-quality service.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endblock %}

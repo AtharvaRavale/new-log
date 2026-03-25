@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Warehousing Services - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Warehousing Hero Banner -->
+<div class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="{% static 'img/ware1.jpg' %}" alt="Warehousing Services" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,0.5);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="text-white fw-bold mb-4">Warehousing Solutions</h1>
+                        <p class="text-white lead">Strategic storage and inventory management for your supply chain</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services Overview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <img src="{% static 'img/modern.jpg' %}" alt="Modern Warehouse" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <h2 class="fw-bold section-title mb-4">State-of-the-Art Facilities</h2>
+                <p>Our strategically located warehouses offer secure, climate-controlled environments with advanced inventory management systems to optimize your supply chain operations.</p>
+                <div class="d-flex mt-4">
+                    <div class="me-3 text-primary">
+                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold">Strategic Locations</h5>
+                        <p class="mb-0">Positioned near major transportation hubs, ports, and highways for efficient distribution nationwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Grid -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Warehousing Capabilities</h2>
+            <p class="text-muted">Comprehensive solutions tailored to your business needs</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card service-card h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-warehouse service-icon"></i>
+                        <h4 class="card-title">Storage Solutions</h4>
+                        <p class="card-text">Short and long-term storage options with flexible space allocation based on your inventory needs.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card service-card h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-barcode service-icon"></i>
+                        <h4 class="card-title">Inventory Management</h4>
+                        <p class="card-text">Real-time tracking systems with advanced barcode and RFID technology for complete visibility.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card service-card h-100 p-4">
+                    <div class="card-body text-center">
+                        <i class="fas fa-boxes service-icon"></i>
+                        <h4 class="card-title">Order Fulfillment</h4>
+                        <p class="card-text">Efficient pick, pack and ship services with quality control procedures to ensure accuracy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Warehouse Types with Images -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Specialized Warehousing Options</h2>
+            <p class="text-muted">Tailored storage solutions for every product type</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-6">
+                            <img src="{% static 'img/temp.avif' %}" alt="Temperature Controlled" class="img-fluid h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body d-flex flex-column h-100 p-4">
+                                <h4 class="card-title fw-bold">Temperature-Controlled</h4>
+                                <p class="card-text">Specialized facilities for climate-sensitive goods with constant monitoring systems.</p>
+                                <ul class="list-unstyled mt-auto">
+                                    <li class="mb-2"><i class="fas fa-thermometer-half text-primary me-2"></i> Pharma-grade cooling</li>
+                                    <li class="mb-2"><i class="fas fa-snowflake text-primary me-2"></i> Cold chain integrity</li>
+                                    <li><i class="fas fa-chart-line text-primary me-2"></i> 24/7 monitoring</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow h-100">
+                    <div class="row g-0 h-100">
+                        <div class="col-md-6">
+                            <img src="{% static 'img/bond.jpeg' %}" alt="Bonded Warehouse" class="img-fluid h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body d-flex flex-column h-100 p-4">
+                                <h4 class="card-title fw-bold">Bonded Warehousing</h4>
+                                <p class="card-text">Secure storage for imported goods with deferred duty payments until distribution.</p>
+                                <ul class="list-unstyled mt-auto">
+                                    <li class="mb-2"><i class="fas fa-lock text-primary me-2"></i> Customs-approved</li>
+                                    <li class="mb-2"><i class="fas fa-money-bill-wave text-primary me-2"></i> Duty deferment</li>
+                                    <li><i class="fas fa-balance-scale text-primary me-2"></i> Regulatory compliance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Value-Added Services -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0 order-lg-2" data-aos="fade-left">
+                <img src="{% static 'img/added.jpg' %}" alt="Value-Added Services" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-7 order-lg-1" data-aos="fade-right">
+                <h2 class="fw-bold section-title mb-4">Value-Added Services</h2>
+                <p class="mb-4">Beyond just storage, we offer comprehensive services to enhance your supply chain efficiency:</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-box fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Kitting & Assembly</h5>
+                                <p class="small mb-0">Custom product assembly and packaging to your specifications</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-tags fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Labeling & Relabeling</h5>
+                                <p class="small mb-0">Customized product labeling to meet market requirements</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-recycle fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Returns Processing</h5>
+                                <p class="small mb-0">Efficient management of product returns and exchanges</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="me-3 text-primary">
+                                <i class="fas fa-truck-loading fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Cross-Docking</h5>
+                                <p class="small mb-0">Streamlined distribution without long-term storage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Metrics & Stats -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Our Warehousing Network</h2>
+            <p class="text-muted">Global reach with local expertise</p>
+        </div>
+        
+        <div class="row text-center g-4">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-4 rounded bg-white shadow">
+                    <div class="display-4 fw-bold text-primary mb-2">500K+</div>
+                    <p class="mb-0 text-muted">Square Feet of Storage</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-4 rounded bg-white shadow">
+                    <div class="display-4 fw-bold text-primary mb-2">15+</div>
+                    <p class="mb-0 text-muted">Strategic Locations</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="p-4 rounded bg-white shadow">
+                    <div class="display-4 fw-bold text-primary mb-2">99.8%</div>
+                    <p class="mb-0 text-muted">Inventory Accuracy</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="p-4 rounded bg-white shadow">
+                    <div class="display-4 fw-bold text-primary mb-2">24/7</div>
+                    <p class="mb-0 text-muted">Security Monitoring</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<!-- <section class="bg-light py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center" data-aos="fade-up">
+                <div class="card border-0 shadow p-4">
+                    <div class="card-body">
+                        <i class="fas fa-quote-left fa-3x text-primary opacity-25 mb-3"></i>
+                        <p class="lead fst-italic mb-4">"Their warehousing solutions transformed our distribution capabilities. The real-time inventory management system gives us complete visibility and control, while the strategic locations have cut our delivery times in half."</p>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="/api/placeholder/60/60" alt="Client" class="rounded-circle me-3" style="width: 60px; height: 60px; object-fit: cover;">
+                            <div class="text-start">
+                                <h5 class="mb-1 fw-bold">Michael Chen</h5>
+                                <p class="small text-muted mb-0">Supply Chain Director, Retail Solutions Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call To Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="bg-primary rounded p-5 text-center text-white" data-aos="fade-up">
+                    <h3 class="fw-bold mb-3">Ready to Optimize Your Warehousing?</h3>
+                    <p class="mb-4">Let's discuss how our flexible warehousing solutions can meet your unique needs</p>
+                    <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-4">Request a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

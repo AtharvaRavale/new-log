@@ -1,0 +1,442 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Air Freight Services - Global Logistics Solutions{% endblock %}
+
+{% block content %}
+<!-- Air Freight Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                <h1 class="fw-bold mb-4">Premium Air Freight Solutions</h1>
+                <p class="lead mb-4">Fast, reliable, and secure air transportation services designed to meet your time-critical shipping needs worldwide.</p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'contact_us' %}" class="btn btn-primary px-4 py-3">Request a Quote</a>
+                    <!-- <a href="#services" class="btn btn-outline-primary px-4 py-3">Explore Services</a> -->
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                <div class="position-relative">
+                    <img src="{% static 'img/main.jpg' %}" alt="Air Freight Services" class="img-fluid rounded-3 shadow-lg" onerror="this.src='/api/placeholder/600/400'; this.onerror=null;">
+                    <div class="position-absolute bottom-0 end-0 bg-primary text-white p-3 rounded-top-start rounded-3 shadow-lg" style="transform: translate(20px, 20px);">
+                        <h5 class="mb-0">24/7 Worldwide Service</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-5" id="benefits">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Why Choose Our Air Freight Services</h2>
+            <p class="text-muted">Delivering excellence in global air logistics</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card service-card p-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-plane-departure service-icon"></i>
+                        <h4 class="card-title">Global Network</h4>
+                        <p class="card-text">Access to major airlines and airports worldwide with extensive coverage across 120+ countries.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card service-card p-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-clock service-icon"></i>
+                        <h4 class="card-title">Time-Critical Shipping</h4>
+                        <p class="card-text">Expedited services for urgent shipments with guaranteed delivery windows to meet your deadlines.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card service-card p-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-chart-line service-icon"></i>
+                        <h4 class="card-title">Real-Time Tracking</h4>
+                        <p class="card-text">Advanced tracking technology providing end-to-end visibility of your shipments at every stage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Details Section -->
+<section class="py-5 bg-light" id="services">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Our Air Freight Services</h2>
+            <p class="text-muted">Comprehensive solutions tailored to your business needs</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4 bg-primary text-white d-flex align-items-center justify-content-center">
+                            <i class="fas fa-plane-departure fa-3x"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">International Air Freight</h4>
+                                <p class="card-text">Standard and express international air freight services connecting major global markets with flexible scheduling options.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Door-to-door delivery</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Express & economy options</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Consolidated shipments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4 bg-primary text-white d-flex align-items-center justify-content-center">
+                            <i class="fas fa-box fa-3x"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Charter Services</h4>
+                                <p class="card-text">Dedicated aircraft charter solutions for oversized cargo, time-critical shipments, or specialized handling requirements.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Full and part charter options</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Project cargo expertise</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> 24/7 operational support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4 bg-primary text-white d-flex align-items-center justify-content-center">
+                            <i class="fas fa-temperature-low fa-3x"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Temperature-Controlled</h4>
+                                <p class="card-text">Specialized solutions for temperature-sensitive cargo including pharmaceuticals, perishables, and healthcare products.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> GDP-compliant handling</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Real-time temperature monitoring</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Validated packaging solutions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="row g-0">
+                        <div class="col-md-4 bg-primary text-white d-flex align-items-center justify-content-center">
+                            <i class="fas fa-shield-alt fa-3x"></i>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h4 class="card-title">Dangerous Goods</h4>
+                                <p class="card-text">Compliant transportation of hazardous materials with expert handling and regulatory documentation support.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> IATA DGR certified specialists</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> All hazard classes handled</li>
+                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Complete documentation assistance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Our Air Freight Process</h2>
+            <p class="text-muted">A seamless journey from pickup to delivery</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="position-relative">
+                    <div class="progress position-absolute" style="width: 75%; height: 4px; top: 45px; left: 12.5%;">
+                        <div class="progress-bar bg-primary" style="width: 100%;"></div>
+                    </div>
+                    
+                    <div class="row text-center">
+                        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-handshake fa-2x"></i>
+                            </div>
+                            <h5 class="mt-4">Booking & Pickup</h5>
+                            <p class="small text-muted">Schedule your shipment and arrange collection</p>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-clipboard-check fa-2x"></i>
+                            </div>
+                            <h5 class="mt-4">Documentation</h5>
+                            <p class="small text-muted">Complete customs and shipping paperwork</p>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-plane fa-2x"></i>
+                            </div>
+                            <h5 class="mt-4">Transportation</h5>
+                            <p class="small text-muted">Air carriage with real-time tracking</p>
+                        </div>
+                        
+                        <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-truck fa-2x"></i>
+                            </div>
+                            <h5 class="mt-4">Delivery</h5>
+                            <p class="small text-muted">Customs clearance and final delivery</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Solutions Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Industry-Specific Solutions</h2>
+            <p class="text-muted">Tailored air freight services for diverse business needs</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="{% static 'img/med.jpg' %}" class="card-img-top" alt="Pharmaceutical Logistics" onerror="this.src='/api/placeholder/400/200'; this.onerror=null;">
+                    <div class="card-body">
+                        <h4 class="card-title">Pharmaceutical</h4>
+                        <p class="card-text">Temperature-controlled solutions for sensitive medical products with GDP compliance and dedicated handling.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="{% static 'img/automotive.jpg' %}" class="card-img-top" alt="Automotive Logistics" onerror="this.src='/api/placeholder/400/200'; this.onerror=null;">
+                    <div class="card-body">
+                        <h4 class="card-title">Automotive</h4>
+                        <p class="card-text">Just-in-time delivery for critical automotive components with specialized handling for high-value parts.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow-sm h-100">
+                    <img src="{% static 'img/ecommerce.png' %}" class="card-img-top" alt="E-commerce Logistics" onerror="this.src='/api/placeholder/400/200'; this.onerror=null;">
+                    <div class="card-body">
+                        <h4 class="card-title">E-commerce</h4>
+                        <p class="card-text">Scalable air freight solutions for e-commerce businesses with rapid delivery and returns management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<!-- <section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">What Our Clients Say</h2>
+            <p class="text-muted">Delivering excellence recognized by businesses worldwide</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5 text-center">
+                                    <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                                    <p class="lead mb-4">"Their air freight service has transformed our supply chain. Time-critical shipments are delivered consistently on schedule, even during peak seasons."</p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="rounded-circle overflow-hidden me-3" style="width: 60px; height: 60px;">
+                                            <img src="/api/placeholder/60/60" alt="Client" class="img-fluid">
+                                        </div>
+                                        <div class="text-start">
+                                            <h5 class="mb-1">Sarah Johnson</h5>
+                                            <p class="mb-0 text-muted small">Logistics Director, MediTech Inc.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5 text-center">
+                                    <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                                    <p class="lead mb-4">"The temperature-controlled air freight services for our pharmaceutical products have been impeccable. Real-time monitoring gives us peace of mind."</p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="rounded-circle overflow-hidden me-3" style="width: 60px; height: 60px;">
+                                            <img src="/api/placeholder/60/60" alt="Client" class="img-fluid">
+                                        </div>
+                                        <div class="text-start">
+                                            <h5 class="mb-1">Michael Chen</h5>
+                                            <p class="mb-0 text-muted small">Supply Chain Manager, GlobalPharm Ltd.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body p-5 text-center">
+                                    <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                                    <p class="lead mb-4">"As an e-commerce business, delivery speed is everything. Their air freight network has allowed us to promise next-day international delivery to our customers."</p>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div class="rounded-circle overflow-hidden me-3" style="width: 60px; height: 60px;">
+                                            <img src="/api/placeholder/60/60" alt="Client" class="img-fluid">
+                                        </div>
+                                        <div class="text-start">
+                                            <h5 class="mb-1">Olivia Rodriguez</h5>
+                                            <p class="mb-0 text-muted small">CEO, FashionNow Online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-outline-primary mx-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="btn btn-outline-primary mx-2" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary text-white" id="get-quote">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="fw-bold mb-3">Ready to optimize your air freight logistics?</h2>
+                <p class="lead">Contact our experts today for a customized solution tailored to your business needs.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-4 py-3">Get a Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<!-- <section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Frequently Asked Questions</h2>
+            <p class="text-muted">Find answers to common air freight inquiries</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="airFreightFAQ">
+                    <div class="accordion-item border mb-3 rounded shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                What types of cargo can be shipped via air freight?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#airFreightFAQ">
+                            <div class="accordion-body">
+                                Our air freight service can accommodate a wide range of cargo types including general cargo, perishables, pharmaceuticals, dangerous goods, high-value items, live animals, and oversized shipments. Our team will work with you to determine the most appropriate solution based on your specific cargo requirements.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border mb-3 rounded shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How quickly can you deliver international air freight shipments?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#airFreightFAQ">
+                            <div class="accordion-body">
+                                Delivery times for international air freight depend on the origin, destination, and service level chosen. Our express services can deliver shipments within 1-3 business days to major global destinations, while standard air freight typically takes 3-5 business days. Time-critical shipments can be expedited with our priority handling options.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border mb-3 rounded shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What documentation is required for international air freight?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#airFreightFAQ">
+                            <div class="accordion-body">
+                                Standard documentation includes commercial invoice, packing list, Air Waybill (AWB), certificate of origin, and customs declaration forms. Depending on the cargo type and destination, additional documents may be required such as dangerous goods declarations, health certificates, or import permits. Our documentation team will guide you through all requirements.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border mb-3 rounded shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                How do you handle customs clearance for air freight shipments?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#airFreightFAQ">
+                            <div class="accordion-body">
+                                We provide comprehensive customs clearance services as part of our air freight solutions. Our customs specialists handle all documentation, classification, duties calculation, and communication with customs authorities. We can act as your customs broker or work with your designated customs agent to ensure smooth clearance.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border mb-3 rounded shadow-sm overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                What tracking and visibility options are available for air shipments?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#airFreightFAQ">
+                            <div class="accordion-body">
+                                We offer real-time tracking through our digital platform that provides milestone updates, estimated delivery times, and shipment status. For temperature-sensitive cargo, we provide additional monitoring capabilities with alerts for any deviations. Customized reporting is available for clients with specific visibility requirements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endblock %}

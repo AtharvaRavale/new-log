@@ -1,0 +1,448 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Ocean Freight Services | Global Logistics Solutions{% endblock %}
+
+{% block content %}
+<!-- Ocean Freight Hero Section -->
+<section class="container-fluid px-0 mb-5">
+    <div class="row g-0">
+        <div class="col-12 position-relative">
+            <img src="{% static 'img/oceanfr.jpg' %}" alt="Ocean Freight" class="img-fluid w-100" style="object-fit: cover; height: 500px;">
+            <div class="position-absolute top-0 start-0 w-100 h-100" >
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-lg-7 text-white" data-aos="fade-right">
+                            <h1 class="display-4 fw-bold mb-4">Ocean Freight Solutions</h1>
+                            <p class="lead mb-4">Reliable, cost-effective shipping solutions across all major trade lanes worldwide. We connect your business to global markets with flexible ocean freight services.</p>
+                            <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-4 me-3">Request a Quote</a>
+                            <!-- <a href="#ocean-services" class="btn btn-outline-light btn-lg px-4">Our Services</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="container my-5 py-3">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <h2 class="fw-bold mb-4">Global Ocean Freight Expertise</h2>
+            <p class="lead text-primary mb-4">We deliver seamless ocean transportation services with extensive global coverage.</p>
+            <p>Our comprehensive ocean freight solutions are designed to meet your specific shipping requirements, whether you need FCL (Full Container Load), LCL (Less than Container Load), or special cargo handling. With strategic partnerships with major shipping lines, we ensure competitive rates and reliable schedules across all major trade lanes.</p>
+            <div class="d-flex mt-4">
+                <div class="me-4">
+                    <i class="fas fa-globe text-primary fa-3x mb-3"></i>
+                    <h5>Global Coverage</h5>
+                    <p class="text-muted">All major ports worldwide</p>
+                </div>
+                <div>
+                    <i class="fas fa-shield-alt text-primary fa-3x mb-3"></i>
+                    <h5>Cargo Safety</h5>
+                    <p class="text-muted">Advanced tracking & protection</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="position-relative">
+                <img src="{% static 'img/ocean.jpg' %}" alt="Global Shipping Network" class="img-fluid rounded shadow">
+                <div class="position-absolute" style="top: -20px; right: -20px; width: 120px; height: 120px; border-top: 5px solid var(--primary); border-right: 5px solid var(--primary); z-index: -1;"></div>
+                <div class="position-absolute" style="bottom: -20px; left: -20px; width: 120px; height: 120px; border-bottom: 5px solid var(--primary); border-left: 5px solid var(--primary); z-index: -1;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ocean Services Section -->
+<section id="ocean-services" class="bg-light py-5 my-5 rounded" data-aos="fade-up">
+    <div class="container py-3">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Ocean Freight Services</h2>
+            <p class="text-muted">Comprehensive solutions tailored to your needs</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-box service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>FCL Shipping</h4>
+                        <p>Full Container Load services for exclusive use of entire containers. Ideal for larger shipments with direct routing and reduced handling.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> 20ft, 40ft, and High Cube options</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Door-to-door delivery available</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Fixed schedules and transit times</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-boxes service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>LCL Shipping</h4>
+                        <p>Less than Container Load services for smaller shipments that share container space. Cost-effective solution with flexible volumes.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Pay only for the space you need</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Consolidated shipping options</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Regular departures on all routes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-truck-loading service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>Special Cargo</h4>
+                        <p>Specialized solutions for oversized, heavy, or high-value cargo requiring custom handling and equipment.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Flat rack and open top containers</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Project cargo expertise</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Hazardous goods handling</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-route service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>Trade Lane Management</h4>
+                        <p>Strategic management of key shipping routes with optimized schedules and capacity planning.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Asia-Europe, Trans-Pacific routes</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Intra-Asia and regional services</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Emerging market coverage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-file-contract service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>Documentation</h4>
+                        <p>Expert handling of all shipping documentation including Bills of Lading, Certificates of Origin, and customs paperwork.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Digital documentation solutions</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Customs compliance expertise</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Trade regulation guidance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                <div class="card service-card h-100">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                            <i class="fas fa-chart-line service-icon" style="font-size: 2rem;"></i>
+                        </div>
+                        <h4>Supply Chain Visibility</h4>
+                        <p>Advanced tracking and real-time visibility of your ocean shipments throughout the journey.</p>
+                        <ul class="list-unstyled mt-3">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Real-time cargo tracking</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Automated status updates</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> Performance analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="container my-5 py-3">
+    <div class="row">
+        <div class="col-12 text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Why Choose Our Ocean Freight Services</h2>
+            <p class="text-muted">Experience the advantages of working with a global logistics leader</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-center p-4 h-100" style="border-radius: 15px; background-color: #f8f9fa;">
+                <div class="rounded-circle bg-primary d-inline-flex p-3 mb-4">
+                    <i class="fas fa-globe fa-2x text-white"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Global Network</h4>
+                <p>Access to all major shipping lines and ports worldwide with extensive route coverage.</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-center p-4 h-100" style="border-radius: 15px; background-color: #f8f9fa;">
+                <div class="rounded-circle bg-primary d-inline-flex p-3 mb-4">
+                    <i class="fas fa-dollar-sign fa-2x text-white"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Competitive Rates</h4>
+                <p>Favorable pricing through volume agreements with major carriers and strategic alliances.</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-center p-4 h-100" style="border-radius: 15px; background-color: #f8f9fa;">
+                <div class="rounded-circle bg-primary d-inline-flex p-3 mb-4">
+                    <i class="fas fa-cogs fa-2x text-white"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Flexible Solutions</h4>
+                <p>Customized shipping strategies designed to meet your specific business requirements.</p>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-center p-4 h-100" style="border-radius: 15px; background-color: #f8f9fa;">
+                <div class="rounded-circle bg-primary d-inline-flex p-3 mb-4">
+                    <i class="fas fa-headset fa-2x text-white"></i>
+                </div>
+                <h4 class="fw-bold mb-3">Dedicated Support</h4>
+                <p>24/7 customer service with dedicated account managers and logistics experts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="container my-5 py-3">
+    <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">Our Ocean Freight Process</h2>
+        <p class="text-muted">Streamlined operations for seamless shipping experience</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="position-relative px-4" data-aos="fade-up">
+                <!-- Timeline line -->
+                <div class="position-absolute" style="top: 40px; bottom: 40px; left: 50%; width: 2px; background-color: var(--primary); z-index: -1;"></div>
+                
+                <!-- Timeline items -->
+                <div class="row mb-5">
+                    <div class="col-md-5 text-md-end">
+                        <div class="mb-2 fw-bold text-primary">STEP 1</div>
+                        <h4 class="fw-bold">Consultation & Quote</h4>
+                        <p>We analyze your shipping needs and provide a comprehensive quote with multiple options.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-2 mt-2">
+                            <i class="fas fa-comments fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-2 mt-2">
+                            <i class="fas fa-tasks fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mb-2 fw-bold text-primary">STEP 2</div>
+                        <h4 class="fw-bold">Booking & Planning</h4>
+                        <p>Our team secures optimal shipping space and designs the most efficient transportation plan.</p>
+                    </div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-md-5 text-md-end">
+                        <div class="mb-2 fw-bold text-primary">STEP 3</div>
+                        <h4 class="fw-bold">Documentation & Compliance</h4>
+                        <p>We handle all necessary documentation and ensure full compliance with international regulations.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-2 mt-2">
+                            <i class="fas fa-file-alt fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <div class="row mb-5">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-2 mt-2">
+                            <i class="fas fa-ship fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="mb-2 fw-bold text-primary">STEP 4</div>
+                        <h4 class="fw-bold">Transportation & Tracking</h4>
+                        <p>Your cargo is transported with real-time tracking and regular status updates throughout the journey.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-5 text-md-end">
+                        <div class="mb-2 fw-bold text-primary">STEP 5</div>
+                        <h4 class="fw-bold">Delivery & Follow-up</h4>
+                        <p>We coordinate final delivery and follow up to ensure your complete satisfaction with our services.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-2 mt-2">
+                            <i class="fas fa-check-circle fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="container-fluid my-5 py-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="bg-primary text-white p-5 rounded-3" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-3">Ready to Optimize Your Ocean Freight?</h2>
+                        <p class="lead mb-0">Contact our expert team today to discuss your shipping requirements and discover how our ocean freight solutions can benefit your business.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-4 me-2">Get a Quote</a>
+                        <!-- <a href="tel:+1234567890" class="btn btn-outline-light btn-lg px-4">Call Us</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<!-- <section class="container my-5 py-3">
+    <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold">Frequently Asked Questions</h2>
+        <p class="text-muted">Answers to common questions about our ocean freight services</p>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-lg-10" data-aos="fade-up">
+            <div class="accordion" id="oceanFreightFAQ">
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            What is the difference between FCL and LCL shipping?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#oceanFreightFAQ">
+                        <div class="accordion-body">
+                            <p><strong>FCL (Full Container Load)</strong> means you're using an entire shipping container exclusively for your goods, regardless of whether it's filled to capacity. This option provides more security and faster delivery since your goods won't be consolidated with others.</p>
+                            <p><strong>LCL (Less than Container Load)</strong> allows you to ship smaller quantities that don't require a full container. Your goods share container space with other shipments, making it more economical for smaller volumes but typically involving longer transit times due to consolidation and deconsolidation processes.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            What documentation is required for ocean freight shipments?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#oceanFreightFAQ">
+                        <div class="accordion-body">
+                            <p>Common documentation for ocean freight typically includes:</p>
+                            <ul>
+                                <li>Bill of Lading (B/L)</li>
+                                <li>Commercial Invoice</li>
+                                <li>Packing List</li>
+                                <li>Certificate of Origin</li>
+                                <li>Import/Export Declarations</li>
+                                <li>Letter of Credit (if applicable)</li>
+                                <li>Insurance Certificate</li>
+                            </ul>
+                            <p>Additional documents may be required depending on the specific cargo type, destination country, and regulatory requirements. Our documentation experts will guide you through the complete process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            How do you handle special cargo or hazardous materials?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#oceanFreightFAQ">
+                        <div class="accordion-body">
+                            <p>We have specialized expertise in handling various types of special cargo, including:</p>
+                            <p><strong>Hazardous Materials:</strong> We ensure compliance with the International Maritime Dangerous Goods (IMDG) Code and provide proper documentation, packaging, labeling, and container selection.</p>
+                            <p><strong>Oversized Cargo:</strong> We use specialized equipment such as flat racks, open-top containers, or break-bulk solutions for cargo that exceeds standard container dimensions.</p>
+                            <p><strong>Temperature-Controlled Goods:</strong> We offer refrigerated containers (reefers) with precise temperature control for perishable items, pharmaceuticals, and other temperature-sensitive products.</p>
+                            <p>Our team includes specialists trained in handling various special cargo types, ensuring safety and compliance throughout the shipping process.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-3 border rounded">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            What tracking capabilities do you offer for ocean shipments?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#oceanFreightFAQ">
+                        <div class="accordion-body">
+                            <p>We provide comprehensive tracking capabilities for all ocean shipments:</p>
+                            <ul>
+                                <li>Real-time container tracking through our online portal</li>
+                                <li>Automated notifications for key milestones</li>
+                                <li>Detailed visibility of estimated arrival times</li>
+                                <li>Exception alerts for any delays or issues</li>
+                                <li>Document access through our digital platform</li>
+                                <li>Mobile app access for on-the-go tracking</li>
+                            </ul>
+                            <p>Our advanced visibility tools give you complete transparency throughout the shipping process, allowing for better planning and inventory management.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item border rounded">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            How can I get a quote for ocean freight services?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#oceanFreightFAQ">
+                        <div class="accordion-body">
+                            <p>Getting a quote for our ocean freight services is simple:</p>
+                            <ol>
+                                <li>Complete our online quote request form on the Contact Us page</li>
+                                <li>Call our customer service team directly</li>
+                                <li>Email your shipment details to our sales department</li>
+                            </ol>
+                            <p>Please provide the following information for an accurate quote:</p>
+                            <ul>
+                                <li>Origin and destination locations</li>
+                                <li>Cargo type and description</li>
+                                <li>Dimensions and weight</li>
+                                <li>Preferred shipping timeline</li>
+                                <li>Any special handling requirements</li>
+                            </ul>
+                            <p>We aim to respond to all quote requests within 24 hours during business days.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endblock %}

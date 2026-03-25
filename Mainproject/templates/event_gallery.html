@@ -1,0 +1,684 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Events & Gallery - Global Logistics Solutions{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="fw-bold display-4 mb-3">Events & Gallery</h1>
+                <p class="lead text-muted">Discover our latest industry events and visual highlights</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="/api/placeholder/600/400" alt="Events and Gallery" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Events Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Upcoming Events</h2>
+            <p class="text-muted">Join us at these industry-leading logistics conferences and exhibitions</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Event 1 - Featured -->
+            <div class="col-12" data-aos="fade-up">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="row g-0">
+                        <div class="col-lg-6">
+                            <img src="/api/placeholder/800/500" class="img-fluid h-100 object-fit-cover" alt="Featured Event">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-primary me-2">Featured</span>
+                                    <small class="text-muted">April 15-17, 2025</small>
+                                </div>
+                                <h3 class="fw-bold mb-3">Global Supply Chain Summit 2025</h3>
+                                <p class="card-text mb-4">Join industry leaders and logistics experts for three days of keynotes, workshops, and networking opportunities. GLS Chairman Michael Johnson will deliver a keynote on "The Future of Sustainable Logistics" on day two.</p>
+                                
+                                <div class="d-flex flex-wrap gap-4 mb-4">
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                            <span>Singapore Expo Convention Center</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clock text-primary me-2"></i>
+                                            <span>9:00 AM - 6:00 PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Events Image Grid -->
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-3 h-100">
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                            <img src="/api/placeholder/400/300" class="img-fluid h-100 object-fit-cover" alt="Event Image">
+                            <div class="event-overlay">
+                                <div class="event-details">
+                                    <span class="badge bg-primary mb-2">Conference</span>
+                                    <h4 class="text-white">Logistics Innovation Forum</h4>
+                                    <p class="text-white-50 mb-0">May 8-9, 2025 • Chicago, IL</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                            <img src="/api/placeholder/400/300" class="img-fluid h-100 object-fit-cover" alt="Event Image">
+                            <div class="event-overlay">
+                                <div class="event-details">
+                                    <span class="badge bg-primary mb-2">Workshop</span>
+                                    <h4 class="text-white">Sustainable Logistics Masterclass</h4>
+                                    <p class="text-white-50 mb-0">June 12, 2025 • Virtual Event</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                            <img src="/api/placeholder/800/300" class="img-fluid h-100 object-fit-cover" alt="Event Image">
+                            <div class="event-overlay">
+                                <div class="event-details">
+                                    <span class="badge bg-primary mb-2">Exhibition</span>
+                                    <h4 class="text-white">International Logistics Expo</h4>
+                                    <p class="text-white-50 mb-0">July 22-25, 2025 • Barcelona, Spain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <h3 class="fw-bold mb-4">Event Highlights</h3>
+                    <div class="event-highlights">
+                        <div class="highlight-item d-flex align-items-center mb-4">
+                            <div class="highlight-icon me-3">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-users text-primary fa-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Industry Leaders</h5>
+                                <p class="mb-0 text-muted">Network with executives from top logistics companies</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item d-flex align-items-center mb-4">
+                            <div class="highlight-icon me-3">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-lightbulb text-primary fa-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Innovation Showcases</h5>
+                                <p class="mb-0 text-muted">Experience cutting-edge logistics technology</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item d-flex align-items-center mb-4">
+                            <div class="highlight-icon me-3">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-chalkboard-teacher text-primary fa-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Expert Workshops</h5>
+                                <p class="mb-0 text-muted">Learn practical skills from industry experts</p>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-item d-flex align-items-center">
+                            <div class="highlight-icon me-3">
+                                <div class="bg-light rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-globe-americas text-primary fa-lg"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Global Perspective</h5>
+                                <p class="mb-0 text-muted">Insights from international logistics leaders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Previous Events Visual Section -->
+<section class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Previous Events</h2>
+            <p class="text-muted">Highlights from our most recent industry gatherings</p>
+        </div>
+        
+        <div class="row g-0" data-aos="fade-up">
+            <div class="col-lg-6">
+                <div class="row g-0">
+                    <div class="col-6">
+                        <div class="event-image-box">
+                            <img src="/api/placeholder/400/400" class="img-fluid" alt="Event Image">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="event-image-box">
+                            <img src="/api/placeholder/400/400" class="img-fluid" alt="Event Image">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="event-image-box">
+                            <img src="/api/placeholder/400/400" class="img-fluid" alt="Event Image">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="event-image-box">
+                            <img src="/api/placeholder/400/400" class="img-fluid" alt="Event Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="p-5 h-100 d-flex flex-column justify-content-center bg-primary">
+                    <h3 class="fw-bold mb-4">Global Logistics Conference 2024</h3>
+                    <p class="mb-4">Our annual flagship event brought together over 1,500 industry professionals from 42 countries. Featuring keynotes from leading experts, interactive workshops, and cutting-edge technology demonstrations.</p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-users text-white me-2"></i>
+                                <span>1,500+ Attendees</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-globe text-white me-2"></i>
+                                <span>42 Countries</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-microphone text-white me-2"></i>
+                                <span>28 Speakers</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-handshake text-white me-2"></i>
+                                <span>12 Partners</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Image Gallery</h2>
+            <p class="text-muted">Visual highlights from our global operations and events</p>
+        </div>
+        
+        <!-- Gallery Filter -->
+        <div class="text-center mb-4" data-aos="fade-up">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary active px-4">All</button>
+                <button type="button" class="btn btn-outline-primary px-4">Events</button>
+                <button type="button" class="btn btn-outline-primary px-4">Facilities</button>
+                <button type="button" class="btn btn-outline-primary px-4">Operations</button>
+            </div>
+        </div>
+        
+        <!-- Gallery Grid -->
+        <div class="row g-3" data-aos="fade-up">
+            <!-- Large Gallery Item -->
+            <div class="col-lg-6 col-md-12">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/800/500" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Global Logistics Conference 2024</h5>
+                            <p class="text-white-50 mb-0">New York, December 2024</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/250" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Bangkok Hub Opening</h5>
+                            <p class="text-white-50 mb-0">Thailand, February 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/250" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">AI Innovation Workshop</h5>
+                            <p class="text-white-50 mb-0">Virtual Event, January 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/250" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Automated Warehouse Operations</h5>
+                            <p class="text-white-50 mb-0">Chicago Facility, March 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/250" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Leadership Summit</h5>
+                            <p class="text-white-50 mb-0">London, November 2024</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 col-md-12">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/800/500" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Fleet Electrification Launch</h5>
+                            <p class="text-white-50 mb-0">San Francisco, February 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/300" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Solar Installation</h5>
+                            <p class="text-white-50 mb-0">Miami Distribution Center, January 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/300" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">Blockchain Technology Summit</h5>
+                            <p class="text-white-50 mb-0">Berlin, December 2024</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm overflow-hidden gallery-item">
+                    <img src="/api/placeholder/400/300" class="img-fluid" alt="Gallery Image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h5 class="text-white mb-2">IoT Implementation</h5>
+                            <p class="text-white-50 mb-0">Tokyo Facility, February 2025</p>
+                        </div>
+                        <a href="#" class="gallery-zoom"><i class="fas fa-search-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Gallery Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Event Videos</h2>
+            <p class="text-muted">Watch highlights and keynotes from our recent events</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="video-thumbnail position-relative">
+                        <img src="/api/placeholder/600/350" class="img-fluid w-100" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-2">Keynote: The Future of Sustainable Logistics</h4>
+                        <p class="text-muted mb-3">Michael Johnson, Chairman of Global Logistics Solutions</p>
+                        <p class="mb-0">An insightful presentation on how sustainable practices are reshaping the logistics industry and creating new opportunities for innovation.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="video-thumbnail position-relative">
+                        <img src="/api/placeholder/600/350" class="img-fluid w-100" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold mb-2">Panel: AI & Blockchain in Supply Chain</h4>
+                        <p class="text-muted mb-3">Led by Sarah Chen, CTO at Global Logistics Solutions</p>
+                        <p class="mb-0">An expert panel discusses how emerging technologies are creating unprecedented transparency and efficiency in global supply chains.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="video-thumbnail position-relative">
+                        <img src="/api/placeholder/400/250" class="img-fluid w-100" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <div class="play-icon small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold mb-2">Bangkok Hub Virtual Tour</h5>
+                        <p class="mb-0 small text-muted">Explore our newest state-of-the-art facility</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="video-thumbnail position-relative">
+                        <img src="/api/placeholder/400/250" class="img-fluid w-100" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <div class="play-icon small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold mb-2">Electric Fleet Showcase</h5>
+                        <p class="mb-0 small text-muted">Our commitment to sustainable transportation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="video-thumbnail position-relative">
+                        <img src="/api/placeholder/400/250" class="img-fluid w-100" alt="Video Thumbnail">
+                        <div class="play-button">
+                            <div class="play-icon small">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3">
+                        <h5 class="fw-bold mb-2">Event Highlights Reel</h5>
+                        <p class="mb-0 small text-muted">Global Logistics Conference 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Global Presence Map Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="fw-bold mb-4">Global Event Presence</h2>
+                <p class="mb-4">Global Logistics Solutions hosts and participates in events across 42 countries. Our industry-leading conferences, workshops, and exhibitions connect logistics professionals worldwide.</p>
+                
+                <div class="d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fas fa-globe-americas text-white"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5 class="mb-0">42 Countries</h5>
+                        <p class="mb-0 text-muted">Global event presence</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center mb-3">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fas fa-calendar-check text-white"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5 class="mb-0">75+ Annual Events</h5>
+                        <p class="mb-0 text-muted">Industry-leading gatherings</p>
+                    </div>
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="fas fa-users text-white"></i>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <h5 class="mb-0">15,000+ Attendees</h5>
+                        <p class="mb-0 text-muted">Annual participation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-0">
+                        <img src="/api/placeholder/800/500" class="img-fluid w-100" alt="Global Event Map">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS for Gallery and Events -->
+<style>
+    /* Gallery Styling */
+    .gallery-item {
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+    
+    .gallery-item img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+    
+    .gallery-info {
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover .gallery-info {
+        transform: translateY(0);
+    }
+    
+    .gallery-zoom {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+    
+    .gallery-zoom:hover {
+        background: var(--bs-primary);
+        color: white;
+    }
+    
+    /* Event Styling */
+    .event-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 100%);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: all 0.3s ease;
+    }
+    
+    .event-image-box {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .event-image-box img {
+        transition: transform 0.5s ease;
+    }
+    
+    .event-image-box:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* Video Styling */
+    .video-thumbnail {
+        overflow: hidden;
+    }
+    
+    .video-thumbnail img {
+        transition: transform 0.5s ease;
+    }
+    
+    /* Video Styling (continuation) */
+    .play-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .video-thumbnail:hover img {
+        transform: scale(1.05);
+    }
+    
+    .video-thumbnail:hover .play-button {
+        background: rgba(0, 0, 0, 0.4);
+    }
+    
+    .play-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--bs-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .play-icon.small {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .video-thumbnail:hover .play-icon {
+        transform: scale(1.1);
+    }
+
+</style>
+{% endblock %}

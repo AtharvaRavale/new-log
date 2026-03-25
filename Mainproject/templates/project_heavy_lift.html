@@ -1,0 +1,326 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Project & Heavy Lift Services - My Django Website{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<!-- <section class="py-5 bg-light rounded-3 mb-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400') center/cover no-repeat;">
+    <div class="container py-5">
+        <div class="row">
+            
+        </div>
+    </div>
+</section> -->
+<section class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="{% static 'img/load.jpg' %}" alt="Warehousing Services" class="img-fluid w-100" style="max-height: 400px; object-fit: cover;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0,0,0,0.5);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-white" data-aos="fade-right">
+                        <div class="col-lg-7 text-white" data-aos="fade-right">
+                            <h1 class="fw-bold mb-4">Project & Heavy Lift Solutions</h1>
+                            <p class="lead">Specialized expertise for oversized, overweight, and complex cargo logistics worldwide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Overview -->
+<section class="mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <img src="{% static 'img/heavy-lift.jpg' %}" alt="Heavy Lift Operations" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+            <h2 class="section-title fw-bold">Specialized Heavy Lift Expertise</h2>
+            <p class="my-4">We specialize in the seamless movement of oversized and exceptionally heavy cargo that requires meticulous planning and specialized equipment. Our project logistics team excels in engineering innovative solutions for the most challenging logistics scenarios.</p>
+            <div class="d-flex align-items-center mb-3">
+                <i class="fas fa-hard-hat text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Expert Project Management</h5>
+                    <p class="mb-0 text-muted">Dedicated specialists with decades of heavy lift experience</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <i class="fas fa-ruler-combined text-primary me-3" style="font-size: 24px;"></i>
+                <div>
+                    <h5 class="mb-0">Custom Engineering Solutions</h5>
+                    <p class="mb-0 text-muted">Tailored approaches for unique project requirements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="my-5 py-3">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Project Logistics Services</h2>
+    
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/equip.jpg' %}" class="card-img-top" alt="Heavy Equipment Transport">
+                <div class="card-body text-center">
+                    <i class="fas fa-truck-monster service-icon"></i>
+                    <h4>Heavy Equipment Transport</h4>
+                    <p>Specialized transport solutions for industrial machinery, transformers, generators, and oversized equipment.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/project-cargo-1.jpg' %}" class="card-img-top" alt="Project Cargo Handling">
+                <div class="card-body text-center">
+                    <i class="fas fa-cogs service-icon"></i>
+                    <h4>Project Cargo Handling</h4>
+                    <p>Expert cargo planning, specialized lifting equipment, and custom rigging solutions for complex projects.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card h-100">
+                <img src="{% static 'img/route.jpg' %}" class="card-img-top" alt="Route Surveys">
+                <div class="card-body text-center">
+                    <i class="fas fa-map-marked-alt service-icon"></i>
+                    <h4>Route Surveys & Planning</h4>
+                    <p>Comprehensive route analysis, permit acquisition, and infrastructure assessment for oversized cargo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industry Sectors -->
+<section class="bg-light p-5 rounded-3 my-5" data-aos="fade-up">
+    <h2 class="text-center fw-bold mb-5">Industries We Serve</h2>
+    <div class="row g-4 text-center">
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-industry text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Energy & Power</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-oil-well text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Oil & Gas</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-wind text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Renewable Energy</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-building text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Construction</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-ship text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Maritime</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-cog text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Manufacturing</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-rocket text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Aerospace</h5>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="bg-white p-4 rounded-3 shadow-sm h-100">
+                <i class="fas fa-tractor text-primary mb-3" style="font-size: 2.5rem;"></i>
+                <h5>Agriculture</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Showcase -->
+<!-- <section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Featured Projects</h2>
+    
+    <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="/api/placeholder/400/300" class="img-fluid rounded-start h-100" alt="Wind Turbine Transport" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <h5 class="card-title">Wind Turbine Transport Project</h5>
+                            <p class="card-text">Transportation of 15 complete wind turbines including 60m blades across challenging terrain.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-2">Energy Sector</span>
+                                <span class="badge bg-secondary">International</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="/api/placeholder/400/300" class="img-fluid rounded-start h-100" alt="Power Plant Equipment" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body h-100 d-flex flex-column">
+                            <h5 class="card-title">Power Plant Equipment Delivery</h5>
+                            <p class="card-text">Multimodal transport of 250-ton generators and transformers for a major power plant.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-2">Power Generation</span>
+                                <span class="badge bg-secondary">Domestic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+     -->
+    
+    <!-- <div class="text-center mt-4">
+        <a href="#" class="btn btn-outline-primary">View More Projects</a>
+    </div> -->
+
+<!-- Equipment Showcase -->
+<section class="my-5 py-5 bg-light rounded-3">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Specialized Equipment</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-3 text-center p-4 shadow-sm">
+                    <img src="{% static 'img/crane.jpg' %}" class="img-fluid mb-3" alt="Heavy Lift Cranes">
+                    <h6>Heavy Lift Cranes</h6>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-3 text-center p-4 shadow-sm">
+                    <img src="{% static 'img/multi.jpg' %}" class="img-fluid mb-3" alt="Multi-axle Trailers">
+                    <h6>Multi-axle Trailers</h6>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-white rounded-3 text-center p-4 shadow-sm">
+                    <img src="{% static 'img/jack.jpg' %}" class="img-fluid mb-3" alt="Specialized Jacking Systems">
+                    <h6>Jacking Systems</h6>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="bg-white rounded-3 text-center p-4 shadow-sm">
+                    <img src="{% static 'img/trucks.avif' %}" class="img-fluid mb-3" alt="Heavy Haul Trucks">
+                    <h6>Heavy Haul Trucks</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="my-5">
+    <h2 class="text-center fw-bold mb-5" data-aos="fade-up">Our Project Execution Process</h2>
+    
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="position-relative">
+                <!-- Process steps with connecting line -->
+                <div class="position-absolute top-0 start-50 translate-middle-x w-1" style="height: 100%; background-color: #e9ecef; z-index: -1;"></div>
+                
+                <!-- Step 1 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">Project Assessment</h4>
+                        <p>Comprehensive analysis of cargo specifications, route options, and regulatory requirements</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <h4 class="fw-bold">Custom Solution Design</h4>
+                        <p>Engineering tailored transportation methods, equipment selection, and specialized rigging plans</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="row mb-5" data-aos="fade-up">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">Permits & Compliance</h4>
+                        <p>Securing all necessary permits, escorts, and ensuring regulatory compliance across jurisdictions</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="row" data-aos="fade-up">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 text-center">
+                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px; z-index: 2; position: relative;">
+                            <span class="fw-bold">4</span>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <h4 class="fw-bold">Project Execution</h4>
+                        <p>Seamless implementation with real-time monitoring, constant communication, and contingency management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white p-5 rounded-3 my-5 text-center" data-aos="fade-up">
+    <h2 class="fw-bold mb-4">Need a Complex Project Logistics Solution?</h2>
+    <p class="lead mb-4">Our engineering team will develop a customized heavy lift strategy for your needs</p>
+    <div>
+        <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg me-2 px-4">Request Consultation</a>
+        <!-- <a href="#" class="btn btn-outline-light btn-lg px-4">Download Capabilities Brochure</a> -->
+    </div>
+</section>
+{% endblock %}

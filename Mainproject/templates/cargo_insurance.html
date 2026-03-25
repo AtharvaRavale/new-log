@@ -1,0 +1,344 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Cargo Insurance | My Django Website{% endblock %}
+
+{% block content %}
+<!-- Hero Banner -->
+<section class="py-5 bg-light rounded-3 mb-5" style="margin-top: 80px;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h1 class="fw-bold display-5 mb-3">Cargo Insurance</h1>
+                <p class="lead">Comprehensive protection for your valuable shipments against loss, damage, and delays during transit.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="{% static 'img/cargo-insurance.jpeg' %}" alt="Cargo Insurance" class="img-fluid rounded-3 shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Why Choose Our Cargo Insurance</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/cargiinsurance-pro.webp' %}" class="card-img-top" alt="Comprehensive Coverage">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-shield-alt fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Comprehensive Coverage</h4>
+                        <p class="card-text">Protection against a wide range of risks including damage, theft, and natural disasters.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/claim.jpg' %}" class="card-img-top" alt="Quick Claims">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-bolt fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Quick Claims Process</h4>
+                        <p class="card-text">Streamlined claims handling with fast settlements to minimize business disruption.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <img src="{% static 'img/glo.webp' %}" class="card-img-top" alt="Global Coverage" style="height: 38%;">
+                    <div class="card-body text-center">
+                        <div class="bg-primary rounded-circle text-white d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </div>
+                        <h4 class="card-title">Global Coverage</h4>
+                        <p class="card-text">Protection for shipments worldwide with local claims support in over 120 countries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coverage Types Section -->
+<section class="py-5 bg-light rounded-3 mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Coverage Options</h2>
+        
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+                <img src="{% static 'img/types.png' %}" alt="Insurance Coverage Types" class="img-fluid rounded-3 shadow w-100 object-fit-cover">
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="accordion" id="coverageAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingAll">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAll">
+                                All Risk Coverage
+                            </button>
+                        </h2>
+                        <div id="collapseAll" class="accordion-collapse collapse show" data-bs-parent="#coverageAccordion">
+                            <div class="accordion-body">
+                                Comprehensive protection covering any physical loss or damage to cargo during transit, regardless of cause, with minimal exclusions.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingNamed">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNamed">
+                                Named Perils Coverage
+                            </button>
+                        </h2>
+                        <div id="collapseNamed" class="accordion-collapse collapse" data-bs-parent="#coverageAccordion">
+                            <div class="accordion-body">
+                                Protection against specific risks explicitly named in the policy, such as fire, collision, or sinking of vessels.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingCustom">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCustom">
+                                Custom Solutions
+                            </button>
+                        </h2>
+                        <div id="collapseCustom" class="accordion-collapse collapse" data-bs-parent="#coverageAccordion">
+                            <div class="accordion-body">
+                                Tailored insurance packages designed to address specific needs based on cargo type, value, and shipping routes.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingSpecial">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecial">
+                                Specialized Cargo Coverage
+                            </button>
+                        </h2>
+                        <div id="collapseSpecial" class="accordion-collapse collapse" data-bs-parent="#coverageAccordion">
+                            <div class="accordion-body">
+                                Dedicated solutions for high-value, perishable, or hazardous goods requiring extra protection.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Visual Process Section -->
+<section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">How Our Insurance Works</h2>
+        
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="fw-bold text-primary" style="font-size: 2rem;">1</span>
+                        </div>
+                        <h4 class="card-title">Risk Assessment</h4>
+                        <p class="card-text">We evaluate your shipping requirements and identify potential risks.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="fw-bold text-primary" style="font-size: 2rem;">2</span>
+                        </div>
+                        <h4 class="card-title">Policy Creation</h4>
+                        <p class="card-text">Tailored coverage designed specifically for your cargo and routes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="fw-bold text-primary" style="font-size: 2rem;">3</span>
+                        </div>
+                        <h4 class="card-title">Documentation</h4>
+                        <p class="card-text">Clear certificates and policy details provided for each shipment.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                            <span class="fw-bold text-primary" style="font-size: 2rem;">4</span>
+                        </div>
+                        <h4 class="card-title">Claims Support</h4>
+                        <p class="card-text">Fast response and settlement if damage or loss occurs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Section -->
+<!-- <section class="py-5 bg-light rounded-3 mb-5">
+    <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <i class="fas fa-quote-left fa-3x text-primary mb-3"></i>
+                <p class="lead mb-4" style="font-size: 1.25rem;">Their cargo insurance service saved our business after a major shipment was damaged during transport. The claims process was quick and painless, and we received full compensation within days.</p>
+                <div>
+                    <img src="/api/placeholder/80/80" alt="Client" class="rounded-circle mb-3" width="80" height="80">
+                    <h5 class="mb-1">Sarah Johnson</h5>
+                    <p class="text-muted">Operations Director, TechGlobal Inc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Industry Coverage Section -->
+<section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Industries We Cover</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-microchip text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Electronics</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-tshirt text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Textiles</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-pills text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Pharmaceuticals</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-car text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Automotive</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="500">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-wine-bottle text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Food & Beverage</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                <div class="card h-100 border-0 shadow-sm rounded-3 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-gem text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Luxury Goods</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary text-white rounded-3 mb-5">
+    <div class="container text-center" data-aos="zoom-in">
+        <h2 class="fw-bold mb-4">Protect Your Valuable Shipments Today</h2>
+        <p class="lead mb-4">Get a customized cargo insurance quote for your specific shipping needs.</p>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg px-5">Get a Quote</a>
+                    <!-- <a href="#" class="btn btn-outline-light btn-lg px-5">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<!-- <section class="mb-5">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Frequently Asked Questions</h2>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="fade-up">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                Why do I need cargo insurance when carriers already provide liability?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Carrier liability is typically limited and may not cover the full value of your goods. Additionally, carriers are often exempt from liability in many circumstances such as natural disasters or "acts of God." Our cargo insurance provides comprehensive coverage beyond these limitations.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm mb-3 rounded">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                How quickly are claims processed?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We pride ourselves on quick claims resolution. Most straightforward claims are processed within 5-7 business days after all required documentation is received. Complex claims may take longer, but our team works diligently to expedite the process.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                Can I insure shipments that have already departed?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                While it's best to arrange insurance before shipment, we can sometimes provide coverage for cargo already in transit, depending on specific circumstances. Contact our team immediately for assessment of in-transit coverage options.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+{% endblock %}
