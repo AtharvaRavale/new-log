@@ -29,10 +29,10 @@ The website focuses on:
 ## Screenshots
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](Mainproject/screenshots/home.png)
 
 ### Services Page
-![Services Page](screenshots/services.png)
+![Services Page](Mainproject/screenshots/services.png)
 
 
 
